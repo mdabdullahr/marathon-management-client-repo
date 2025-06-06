@@ -1,14 +1,15 @@
 import React from "react";
 import navLogo from "../assets/marathons-logo.png";
 import { Link, NavLink } from "react-router";
+import DarkMoodToggoler from "./DarkMoodToggoler";
 
 const links = (
   <>
-    <li className="text-lg text-orange-500 hover:text-orange-600
+    <li className="text-lg text-teal-500 hover:text-teal-600
  md:text-xl">
       <NavLink to="/">Home</NavLink>
     </li>
-    <li className="text-lg text-orange-500 hover:text-orange-600
+    <li className="text-lg text-teal-500 hover:text-teal-600
  md:text-xl">
       <NavLink to="/marathons">Marathons</NavLink>
     </li>
@@ -57,10 +58,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           {links}
         </ul>
+        <DarkMoodToggoler></DarkMoodToggoler>
         <Link to="/login"><button className="btn btn-outline btn-success">Login</button> </Link>
         <Link to="/register"><button className="btn btn-outline btn-success">Register</button></Link>
       </div>
       <div className="navbar-end lg:hidden">
+        <DarkMoodToggoler></DarkMoodToggoler>
         <Link to="/login"><button className="btn btn-outline btn-success mr-2">Login</button> </Link>
         <Link to="/register"><button className="btn btn-outline btn-success">Register</button></Link>
       </div>
