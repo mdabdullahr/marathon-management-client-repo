@@ -9,3 +9,7 @@ body {
 .specific-text {
   font-family: "Poppins", sans-serif;
 }
+
+a.active{
+  text-decoration: underline;
+}
