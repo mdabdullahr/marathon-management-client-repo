@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import Marathons from "../Pages/Marathons/Marathons";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import TermsAndCondition from "../Pages/TermsAndCondition/TermsAndCondition.jsx"
+import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +29,16 @@ export const router = createBrowserRouter([
         {
             path: "/register",
             Component: Register
+        },
+        {
+            path: "/terms-and-conditions",
+            Component: TermsAndCondition
+        }, 
+        {
+            path: "/privacy-policy",
+            Component: PrivacyPolicy
         }
+
     ]
   },
 ]);
