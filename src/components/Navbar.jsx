@@ -5,11 +5,11 @@ import DarkMoodToggoler from "./DarkMoodToggoler";
 
 const links = (
   <>
-    <li className="text-lg text-teal-500 hover:text-teal-600
+    <li className="text-lg text-green-500 hover:text-green-600
  md:text-xl">
       <NavLink to="/">Home</NavLink>
     </li>
-    <li className="text-lg text-teal-500 hover:text-teal-600
+    <li className="text-lg text-green-500 hover:text-green-600
  md:text-xl">
       <NavLink to="/marathons">Marathons</NavLink>
     </li>
@@ -50,7 +50,7 @@ const Navbar = () => {
           src={navLogo}
           alt="Nav Logo"
         />
-        <h3 className="text-xl lg:text-2xl font-semibold text-green-700
+        <h3 className="text-xl lg:text-2xl font-semibold dark:text-white text-green-500
  hidden md:block">Marathon<span className="text-orange-700">'</span>s</h3>
       </div>
 
