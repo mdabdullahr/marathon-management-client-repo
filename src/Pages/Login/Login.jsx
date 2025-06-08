@@ -1,11 +1,38 @@
-import React, { useState } from "react";
-import { Link } from "react-router";
+import React, { useContext, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FaEnvelope, FaLock } from "react-icons/fa";
-import { ImEye } from 'react-icons/im';
-import { RiEyeCloseFill } from 'react-icons/ri';
+import { ImEye } from "react-icons/im";
+import { RiEyeCloseFill } from "react-icons/ri";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Login = () => {
-    const [showPassword, setShowPassword] = useState(false);
+  const { loginUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const emailRef = useRef();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    loginUser(email, password)
+      .then((result) => {
+        Swal.fire({
+          title: "Successfully Login!",
+          icon: "success",
+          draggable: true,
+        });
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        toast.error("Login fail" + error.code);
+      });
+  };
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center"
@@ -21,7 +48,7 @@ const Login = () => {
           <h2 className="text-2xl text-center font-bold">Login</h2>
         </div>
 
-        <form className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-4">
           {/* Email Field */}
           <div>
             <label className="block mb-1">Email</label>
@@ -31,6 +58,7 @@ const Login = () => {
               </span>
               <input
                 name="email"
+                ref={emailRef}
                 type="email"
                 className="w-full pl-10 pr-4 py-2 rounded-md border  bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300"
                 placeholder="Enter your email"
@@ -96,9 +124,7 @@ const Login = () => {
         </div>
 
         {/* Google Login */}
-        <button
-          className="btn bg-white text-black border-[#e5e5e5] w-full"
-        >
+        <button className="btn bg-white text-black border-[#e5e5e5] w-full">
           <svg
             aria-label="Google logo"
             width="16"
