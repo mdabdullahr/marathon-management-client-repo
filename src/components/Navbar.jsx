@@ -3,9 +3,11 @@ import navLogo from "../assets/marathons-logo.png";
 import { Link, NavLink } from "react-router";
 import DarkMoodToggoler from "./DarkMoodToggoler";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logoutUser } = useContext(AuthContext);
 
   const links = (
     <>
@@ -31,6 +33,20 @@ const Navbar = () => {
       )}
     </>
   );
+
+  const handleLogOut = () => {
+    logoutUser()
+      .then(() => {
+        Swal.fire({
+          title: "Successfully Logged Out...!",
+          icon: "success",
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        toast.error("Logout failed...!");
+      });
+  };
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-transparent bg-opacity-50 backdrop-blur-md">
       <div className="navbar w-11/12 mx-auto py-3">
@@ -68,8 +84,8 @@ const Navbar = () => {
             className="text-xl lg:text-2xl font-semibold dark:text-white text-green-500
  hidden md:block"
           >
-            Marathon<span className="text-orange-700">'</span>s
-          </h3>
+            Marathon<span className="text-orange-700">'</span>s Management
+           </h3>
         </div>
 
         <div className="navbar-end hidden lg:flex gap-4">
@@ -88,7 +104,9 @@ const Navbar = () => {
             </div>
           )}
           {user ? (
-            <button className="btn btn-success">Logout</button>
+            <button onClick={handleLogOut} className="btn btn-success">
+              Logout
+            </button>
           ) : (
             <>
               <Link to="/login">
@@ -104,12 +122,34 @@ const Navbar = () => {
         </div>
         <div className="navbar-end lg:hidden">
           <DarkMoodToggoler></DarkMoodToggoler>
-          <Link to="/login">
-            <button className="btn btn-outline btn-success mr-2">Login</button>{" "}
-          </Link>
-          <Link to="/register">
-            <button className="btn btn-outline btn-success">Register</button>
-          </Link>
+          {user && (
+            <div className="relative group mr-3 lg:mr-0">
+              <img
+                className="w-6 md:w-12 h-6 md:h-12 rounded-full border border-green-600"
+                src={user.photoURL}
+                alt="userImg"
+              />
+              <div className="absolute  left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                {user.displayName}
+              </div>
+            </div>
+          )}
+          {user ? (
+            <button onClick={handleLogOut} className="btn btn-success">
+              Logout
+            </button>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className="btn btn-outline btn-success">Login</button>{" "}
+              </Link>
+              <Link to="/register">
+                <button className="btn btn-outline btn-success">
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>
