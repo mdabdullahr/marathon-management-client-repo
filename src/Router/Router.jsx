@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import TermsAndCondition from "../Pages/TermsAndCondition/TermsAndCondition.jsx"
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy.jsx";
+import Dashboard from "../Pages/Dashboard/Dashboard.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         {
             path: "/marathons",
             Component : Marathons
+        },
+        {
+            path: "/dashboard",
+            Component : Dashboard
         },
         {
             path: "/login",
