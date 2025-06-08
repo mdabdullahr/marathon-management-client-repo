@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import navLogo from "../assets/marathons-logo.png";
 import { Link, NavLink } from "react-router";
 import DarkMoodToggoler from "./DarkMoodToggoler";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const links = (
   <>
@@ -17,6 +18,7 @@ const links = (
 );
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext);
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-transparent bg-opacity-50 backdrop-blur-md">
     <div className="navbar w-11/12 mx-auto py-3">
