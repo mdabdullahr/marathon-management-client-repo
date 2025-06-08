@@ -42,18 +42,20 @@ const Footer = () => {
       >
         {/* Left Section */}
         <div>
-          <img
-            className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
-            src={footerImage}
-            alt=""
-          />
-          <h4
-            className={`text-2xl md:text-4xl font-bold text-green-700 specific-text ${
-              isDark ? "text-gray-400" : ""
-            }`}
-          >
-            Marathon's
-          </h4>
+          <div className="flex gap-2 items-center">
+            <img
+              className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+              src={footerImage}
+              alt=""
+            />
+            <h4
+              className={`text-2xl md:text-4xl font-bold text-green-700 specific-text ${
+                isDark ? "text-gray-400" : ""
+              }`}
+            >
+              Marathon's Management
+            </h4>
+          </div>
           <p
             className={`text-xs md:text-lg mt-4 mb-6 ${
               isDark ? "text-gray-400" : "text-gray-600"
@@ -103,93 +105,104 @@ const Footer = () => {
           >
             <NavLink to="/marathons">Marathons</NavLink>
           </p>
+          <p
+            className={`text-sm md:text-lg ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </p>
         </div>
 
         {/* Right section */}
         {/* Social Links */}
-        <div>
-            <h3 className={`text-lg md:text-2xl font-semibold mt-8 mb-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}>Follow Us</h3>
-            <div className="flex items-center gap-4 mt-4">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`rounded-full p-2 ${
-              isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
-            }`}
-          >
-            <FaFacebookF size={20} />
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`rounded-full p-2 ${
-              isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
-            }`}
-          >
-            <FaTwitter size={20} />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 rounded-full p-2"
-          >
-            <FaInstagram size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`rounded-full p-2 ${
-              isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
-            }`}
-          >
-            <FaLinkedinIn size={20} />
-          </a>
-        </div>
         <div>
           <h3
             className={`text-lg md:text-2xl font-semibold mt-8 mb-4 ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
-            Get in Touch
+            Follow Us
           </h3>
-          <div
-            className={`space-y-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <MdPhone
-                className={`text-sm md:text-lg lg:text-2xl ${
-                  isDark ? "text-gray-400" : "text-gray-600"
-                }`}
-              />
-              <span className="text-sm md:text-lg">+880 1234-567890</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdEmail
-                className={`text-sm md:text-lg lg:text-2xl ${
-                  isDark ? "text-gray-400" : "text-gray-600"
-                }`}
-              />
-              <span className="text-sm md:text-lg">hobbyhub@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdLocationOn
-                className={`text-sm md:text-lg lg:text-2xl ${
-                  isDark ? "text-gray-400" : "text-gray-600"
-                }`}
-              />
-              <span className="text-sm md:text-lg">Dhaka, Bangladesh</span>
+          <div className="flex items-center gap-4 mt-4">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-full p-2 ${
+                isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
+              }`}
+            >
+              <FaFacebookF size={20} />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-full p-2 ${
+                isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
+              }`}
+            >
+              <FaTwitter size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 rounded-full p-2"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-full p-2 ${
+                isDark ? "bg-blue-900 text-white" : "bg-blue-500 text-white"
+              }`}
+            >
+              <FaLinkedinIn size={20} />
+            </a>
+          </div>
+          <div>
+            <h3
+              className={`text-lg md:text-2xl font-semibold mt-8 mb-4 ${
+                isDark ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              Get in Touch
+            </h3>
+            <div
+              className={`space-y-4 ${
+                isDark ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <MdPhone
+                  className={`text-sm md:text-lg lg:text-2xl ${
+                    isDark ? "text-gray-400" : "text-gray-600"
+                  }`}
+                />
+                <span className="text-sm md:text-lg">+880 1234-567890</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MdEmail
+                  className={`text-sm md:text-lg lg:text-2xl ${
+                    isDark ? "text-gray-400" : "text-gray-600"
+                  }`}
+                />
+                <span className="text-sm md:text-lg">hobbyhub@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MdLocationOn
+                  className={`text-sm md:text-lg lg:text-2xl ${
+                    isDark ? "text-gray-400" : "text-gray-600"
+                  }`}
+                />
+                <span className="text-sm md:text-lg">Dhaka, Bangladesh</span>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 

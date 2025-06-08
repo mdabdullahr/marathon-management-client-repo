@@ -9,12 +9,13 @@ import TermsAndCondition from "../Pages/TermsAndCondition/TermsAndCondition.jsx"
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import Dashboard from "../Pages/Dashboard/Dashboard.jsx";
 import PrivateRoutes from "../Provider/PrivateRoutes.jsx";
+import MarathonDetails from "../Pages/MarathonDetails/MarathonDetails.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayouts,
-    errorElement: ErrorPage,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
         {
             index: true,
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
         {
             path: "/dashboard",
             element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>
+        },
+        {
+            path: "/marathon-details/:id",
+            element: <PrivateRoutes><MarathonDetails></MarathonDetails></PrivateRoutes>
         },
         {
             path: "/login",

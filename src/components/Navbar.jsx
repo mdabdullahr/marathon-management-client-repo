@@ -76,7 +76,7 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            className="w-6 h-6 lg:w-12 lg:h-12 object-cover"
+            className="w-8 h-8 lg:w-12 lg:h-12 object-cover"
             src={navLogo}
             alt="Nav Logo"
           />
@@ -85,7 +85,7 @@ const Navbar = () => {
  hidden md:block"
           >
             Marathon<span className="text-orange-700">'</span>s Management
-           </h3>
+          </h3>
         </div>
 
         <div className="navbar-end hidden lg:flex gap-4">
@@ -94,7 +94,7 @@ const Navbar = () => {
           {user && (
             <div className="relative group">
               <img
-                className="w-6 md:w-12 h-6 md:h-12 rounded-full border border-green-600"
+                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-green-600"
                 src={user.photoURL}
                 alt="userImg"
               />
@@ -104,16 +104,28 @@ const Navbar = () => {
             </div>
           )}
           {user ? (
-            <button onClick={handleLogOut} className="btn btn-success">
+            <button
+              onClick={handleLogOut}
+              data-aos="zoom-in"
+              className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+            >
               Logout
             </button>
           ) : (
             <>
               <Link to="/login">
-                <button className="btn btn-outline btn-success">Login</button>{" "}
+                <button
+                  data-aos="zoom-in"
+                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                >
+                  Login
+                </button>{" "}
               </Link>
               <Link to="/register">
-                <button className="btn btn-outline btn-success">
+                <button
+                  data-aos="zoom-in"
+                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                >
                   Register
                 </button>
               </Link>
@@ -125,7 +137,7 @@ const Navbar = () => {
           {user && (
             <div className="relative group mr-3 lg:mr-0">
               <img
-                className="w-6 md:w-12 h-6 md:h-12 rounded-full border border-green-600"
+                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-green-600"
                 src={user.photoURL}
                 alt="userImg"
               />
@@ -135,16 +147,28 @@ const Navbar = () => {
             </div>
           )}
           {user ? (
-            <button onClick={handleLogOut} className="btn btn-success">
+            <button
+              onClick={handleLogOut}
+              data-aos="zoom-in"
+              className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+            >
               Logout
             </button>
           ) : (
             <>
               <Link to="/login">
-                <button className="btn btn-outline btn-success">Login</button>{" "}
+                <button
+                  data-aos="zoom-in"
+                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
+                >
+                  Login
+                </button>{" "}
               </Link>
               <Link to="/register">
-                <button className="btn btn-outline btn-success">
+                <button
+                  data-aos="zoom-in"
+                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                >
                   Register
                 </button>
               </Link>

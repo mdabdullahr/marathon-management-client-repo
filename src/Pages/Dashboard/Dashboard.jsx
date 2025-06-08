@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const Dashboard = () => {
-    return (
-        <div className='min-h-screen py-24'>
-            <h1>this is dashboard</h1>
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="py-24">
+        <h1>This is Marathons Page</h1>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
