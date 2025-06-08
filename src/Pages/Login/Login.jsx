@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,6 +32,20 @@ const Login = () => {
       .catch((error) => {
         toast.error("Login fail" + error.code);
       });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin().then((res) => {
+      Swal.fire({
+        title: "Google Login Successfully...!",
+        icon: "success",
+        draggable: true,
+      });
+      navigate(`${location.state ? location.state : "/"}`);
+    })
+    .catch(err => {
+      toast.error("Google Login fail " + err.message)
+    })
   };
   return (
     <div
@@ -124,7 +138,7 @@ const Login = () => {
         </div>
 
         {/* Google Login */}
-        <button className="btn bg-white text-black border-[#e5e5e5] w-full">
+        <button onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5] w-full">
           <svg
             aria-label="Google logo"
             width="16"
