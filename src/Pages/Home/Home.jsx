@@ -3,14 +3,15 @@ import Slider from "./slider";
 import Marathons from "./Marathons";
 import UpcomingMarathons from "./UpcommingMarathon";
 import UpcomingMarathonTips from "./UpcomingMarathonTips";
+import WhyJoinMarathon from "./WhyJoinMarathon";
 
 const Home = () => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-500">
       <Slider></Slider>
       <section data-aos="zoom-in" className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto mt-10 lg:mt-20">
-        <h2 className="text-2xl text-green-500 md:text-4xl lg:text-5xl specific-text text-center font-bold">
-          Marathons
+        <h2 className="text-2xl dark:text-white text-gray-600 md:text-3xl lg:text-4xl specific-text text-center font-bold">
+          Marathon's
         </h2>
         <p className="text-center text-sm md:text-lg lg:text-xl mt-5 text-gray-600 dark:text-gray-400 max-w-7xl mx-auto">
           Discover some of the most exciting upcoming marathon events happening
@@ -30,6 +31,11 @@ const Home = () => {
       {/* extra section 1 */}
       <section>
         <UpcomingMarathonTips></UpcomingMarathonTips>
+      </section>
+
+      {/* extra section 2 */}
+      <section>
+        <WhyJoinMarathon></WhyJoinMarathon>
       </section>
     </div>
   );

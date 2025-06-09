@@ -54,7 +54,7 @@ const marathonEvents = [
 const UpcomingMarathons = () => {
   return (
     <section className="py-10">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+      <h2 data-aos="fade-up" className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-white specific-text">
         Upcoming Marathons
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-7xl mx-auto">

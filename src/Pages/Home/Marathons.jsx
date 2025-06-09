@@ -44,8 +44,9 @@ const Marathons = () => {
           )}
 
           {/* Text Content */}
-          <div data-aos="fade-up" className="space-y-3 px-1 mt-2">
-            <h3 className="text-xl md:text-2xl font-bold text-green-500">
+          <div className="space-y-3 px-1 mt-2">
+            {/* Card Heading */}
+            <h3 className="text-xl md:text-2xl font-medium text-gray-800 dark:text-white specific-text">
               {marathon.title}
             </h3>
 
@@ -58,9 +59,10 @@ const Marathons = () => {
               {marathon.registrationEnd}
             </p>
 
+            {/* View Details Button */}
             <Link
               to={`/marathon-details/${marathon._id}`}
-              className="inline-block w-full text-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 rounded-lg transition duration-300"
+              className="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white font-medium py-2 rounded-lg transition duration-300"
             >
               View Details
             </Link>
