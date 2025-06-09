@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "./slider";
 import Marathons from "./Marathons";
 import UpcomingMarathons from "./UpcommingMarathon";
+import UpcomingMarathonTips from "./UpcomingMarathonTips";
 
 const Home = () => {
   return (
@@ -24,6 +25,11 @@ const Home = () => {
       </section>
       <section >
         <UpcomingMarathons></UpcomingMarathons>
+      </section>
+
+      {/* extra section 1 */}
+      <section>
+        <UpcomingMarathonTips></UpcomingMarathonTips>
       </section>
     </div>
   );
