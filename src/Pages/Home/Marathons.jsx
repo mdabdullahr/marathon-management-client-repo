@@ -27,7 +27,7 @@ const Marathons = () => {
         <div
           key={marathon._id}
           data-aos="fade-up"
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col gap-4 p-4"
+          className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
         >
           {/* Image */}
           {marathon.image && (
@@ -44,7 +44,7 @@ const Marathons = () => {
           )}
 
           {/* Text Content */}
-          <div data-aos="fade-left" className="space-y-3 px-1">
+          <div data-aos="fade-up" className="space-y-3 px-1 mt-2">
             <h3 className="text-xl md:text-2xl font-bold text-green-500">
               {marathon.title}
             </h3>

@@ -1,12 +1,13 @@
 import React from "react";
 import Slider from "./slider";
 import Marathons from "./Marathons";
+import UpcomingMarathons from "./UpcommingMarathon";
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="bg-white dark:bg-gray-900 transition-colors duration-500">
       <Slider></Slider>
-      <section className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto mt-10 lg:mt-20">
+      <section data-aos="zoom-in" className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto mt-10 lg:mt-20">
         <h2 className="text-2xl text-green-500 md:text-4xl lg:text-5xl specific-text text-center font-bold">
           Marathons
         </h2>
@@ -20,6 +21,9 @@ const Home = () => {
         <div className="mt-10 pb-10">
         <Marathons></Marathons>
         </div>
+      </section>
+      <section >
+        <UpcomingMarathons></UpcomingMarathons>
       </section>
     </div>
   );
