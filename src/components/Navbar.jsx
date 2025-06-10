@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import navLogo from "../assets/marathons-logo.png";
+import navLogo from "../assets/running.png";
 import { Link, NavLink } from "react-router";
 import DarkMoodToggoler from "./DarkMoodToggoler";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -12,20 +12,20 @@ const Navbar = () => {
   const links = (
     <>
       <li
-        className="text-lg text-green-500 hover:text-green-600
+        className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/">Home</NavLink>
       </li>
       <li
-        className="text-lg text-green-500 hover:text-green-600
+        className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/marathons">Marathons</NavLink>
       </li>
       {user && (
         <li
-          className="text-lg text-green-500 hover:text-green-600
+          className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
  md:text-xl"
         >
           <NavLink to="/dashboard">Dashboard</NavLink>
@@ -76,15 +76,15 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            className="w-8 h-8 lg:w-12 lg:h-12 object-cover"
+            className="w-8 h-8 lg:w-16 lg:h-16 object-cover"
             src={navLogo}
             alt="Nav Logo"
           />
           <h3
-            className="text-xl lg:text-2xl font-semibold dark:text-white text-green-500
+            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold dark:text-gray-300 text-gray-800
  hidden md:block"
           >
-            Marathon<span className="text-orange-700">'</span>s Management
+            Marathon<span className="text-orange-700">'</span>s 
           </h3>
         </div>
 
@@ -94,7 +94,7 @@ const Navbar = () => {
           {user && (
             <div className="relative group">
               <img
-                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-green-600"
+                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-gray-800 dark:border-gray-300"
                 src={user.photoURL}
                 alt="userImg"
               />
@@ -107,7 +107,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Logout
             </button>
@@ -116,7 +116,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Login
                 </button>{" "}
@@ -124,7 +124,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Register
                 </button>
@@ -150,7 +150,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Logout
             </button>
@@ -159,7 +159,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
+                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Login
                 </button>{" "}
@@ -167,7 +167,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="text-green-500 hover:text-white specific-text text-sm md:text-xl outline outline-green-500 hover:bg-green-500  px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Register
                 </button>

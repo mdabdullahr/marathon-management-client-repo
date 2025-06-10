@@ -7,7 +7,7 @@ import WhyJoinMarathon from "./WhyJoinMarathon";
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 transition-colors duration-500">
+    <div className="transition-colors duration-500">
       <Slider></Slider>
       <section data-aos="zoom-in" className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto mt-10 lg:mt-20">
         <h2 className="text-2xl dark:text-white text-gray-600 md:text-3xl lg:text-4xl specific-text text-center font-bold">

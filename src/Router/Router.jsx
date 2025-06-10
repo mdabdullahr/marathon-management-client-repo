@@ -10,6 +10,10 @@ import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import Dashboard from "../Pages/Dashboard/Dashboard.jsx";
 import PrivateRoutes from "../Provider/PrivateRoutes.jsx";
 import MarathonDetails from "../Pages/MarathonDetails/MarathonDetails.jsx";
+import AddMarathon from "../Pages/AddMarathon/AddMarathon.jsx";
+import MyMarathonList from "../Pages/MyMarathonList/MyMarathonList.jsx";
+import MyApplyList from "../Pages/MyApplyList/MyApplyList.jsx";
+import WelcomeDashboard from "../components/WelcomeDashboard.jsx"
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +31,25 @@ export const router = createBrowserRouter([
         },
         {
             path: "/dashboard",
-            element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>
+            element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
+            children:[
+                {
+                    index: true,
+                    Component: WelcomeDashboard
+                },
+                {
+                    path: "addMarathon",
+                    element: <PrivateRoutes><AddMarathon></AddMarathon></PrivateRoutes>
+                },
+                {
+                    path: "myMarathonList",
+                    element: <PrivateRoutes><MyMarathonList></MyMarathonList></PrivateRoutes>
+                },
+                {
+                    path: "myApplyList",
+                    element: <PrivateRoutes><MyApplyList></MyApplyList></PrivateRoutes>
+                }
+            ]
         },
         {
             path: "/marathon-details/:id",

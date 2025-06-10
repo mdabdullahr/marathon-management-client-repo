@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import { NavLink } from "react-router";
-import footerImage from "../assets/marathons-logo.png";
+import footerImage from "../assets/running.png";
 
 const Footer = () => {
   const [isDark, setIsDark] = useState(false);
@@ -38,24 +38,23 @@ const Footer = () => {
     >
       <div
         data-aos="fade-up"
-        className="w-11/12 lg:w-8/12 mx-auto pt-20 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-52"
+        className="w-11/12 lg:w-8/12 mx-auto pt-20 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 xl:gap-42 2xl:gap-52"
       >
         {/* Left Section */}
         <div>
-          <div className="flex gap-2 items-center">
             <img
               className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
               src={footerImage}
               alt=""
             />
             <h4
-              className={`text-2xl md:text-4xl font-bold text-green-700 specific-text ${
+              className={`text-2xl font-bold text-gray-800 dark:text-gray-300 specific-text ${
                 isDark ? "text-gray-400" : ""
               }`}
             >
               Marathon's Management
             </h4>
-          </div>
+          
           <p
             className={`text-xs md:text-lg mt-4 mb-6 ${
               isDark ? "text-gray-400" : "text-gray-600"
