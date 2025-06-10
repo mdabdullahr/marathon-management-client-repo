@@ -14,6 +14,7 @@ import AddMarathon from "../Pages/AddMarathon/AddMarathon.jsx";
 import MyMarathonList from "../Pages/MyMarathonList/MyMarathonList.jsx";
 import MyApplyList from "../Pages/MyApplyList/MyApplyList.jsx";
 import WelcomeDashboard from "../components/WelcomeDashboard.jsx"
+import Registration from "../Pages/Registration/Registration.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,15 @@ export const router = createBrowserRouter([
             path: "/marathons",
             loader: ()=> fetch('http://localhost:3000/all-marathons'),
             element: <PrivateRoutes><Marathons></Marathons></PrivateRoutes>
+        },
+        {
+            path: "/marathon/:id",
+            element: <PrivateRoutes><MarathonDetails></MarathonDetails></PrivateRoutes>,
+            loader: ({ params }) => fetch(`http://localhost:3000/all-marathons/${params.id}`)
+        },
+        {
+            path: "/registration/:id",
+            element: <PrivateRoutes><Registration></Registration></PrivateRoutes>
         },
         {
             path: "/dashboard",
@@ -51,10 +61,6 @@ export const router = createBrowserRouter([
                     element: <PrivateRoutes><MyApplyList></MyApplyList></PrivateRoutes>
                 }
             ]
-        },
-        {
-            path: "/marathon-details/:id",
-            element: <PrivateRoutes><MarathonDetails></MarathonDetails></PrivateRoutes>
         },
         {
             path: "/login",
