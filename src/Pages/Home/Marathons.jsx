@@ -55,7 +55,7 @@ const Marathons = () => {
             </p>
 
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              📅 Registration: {marathon.startRegistrationDate} –{" "}
+              📅 Registration Dates : {marathon.startRegistrationDate} –{" "}
               {marathon.endRegistrationDate}
             </p>
 
