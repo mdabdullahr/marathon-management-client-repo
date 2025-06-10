@@ -1,20 +1,19 @@
-import React, { useRef, useState } from "react";
+import axios from "axios";
+import React, { useContext, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
-const runningDistance = [
-  "25K",
-  "20K",
-  "15K",
-  "10K",
-  "5K",
-  "3K",
-];
+const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const AddMarathon = () => {
-  const [startRegDate, setStartRegDate] = useState(null);      
-  const [endRegDate, setEndRegDate] = useState(null);          
-  const [marathonDate, setMarathonDate] = useState(null);      
+  const {user} = useContext(AuthContext);
+
+  const [startRegDate, setStartRegDate] = useState(null);
+  const [endRegDate, setEndRegDate] = useState(null);
+  const [marathonDate, setMarathonDate] = useState(null);
 
   const startRegRef = useRef(null);
   const endRegRef = useRef(null);
@@ -32,8 +31,29 @@ const AddMarathon = () => {
     const formData = new FormData(form);
     const formObject = Object.fromEntries(formData.entries());
     formObject.registrationsCount = 0;
+    formObject.organizerName = user.displayName;
+    formObject.organizerEmail = user.email;
+
     console.log(formObject);
-  }
+
+    // Sent Data To DB
+    axios
+      .post("http://localhost:3000/marathons", formObject)
+      .then((res) => {
+        if (res.data?.insertedId) {
+          Swal.fire({
+            title: "Marathon Add Successfully!",
+            icon: "success",
+            draggable: true,
+          });
+          form.reset();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed to add marathon. Please try again.");
+      });
+  };
 
   return (
     <div className="my-10">
@@ -70,22 +90,22 @@ const AddMarathon = () => {
             </label>
             <DatePicker
               name="startRegistrationDate"
-              selected={startRegDate} 
+              selected={startRegDate}
               onChange={(date) => {
-                setStartRegDate(date); 
+                setStartRegDate(date);
                 if (startRegRef.current)
-                  startRegRef.current.value = formatDate(date); 
+                  startRegRef.current.value = formatDate(date);
               }}
               customInput={
                 <input
                   ref={startRegRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none" 
+                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
                   placeholder="Select Start Registration Date"
                 />
               }
               dateFormat="yyyy-MM-dd"
-              wrapperClassName="w-full" 
+              wrapperClassName="w-full"
             />
           </div>
 
@@ -99,22 +119,22 @@ const AddMarathon = () => {
             </label>
             <DatePicker
               name="endRegistrationDate"
-              selected={endRegDate} 
+              selected={endRegDate}
               onChange={(date) => {
-                setEndRegDate(date); 
+                setEndRegDate(date);
                 if (endRegRef.current)
-                  endRegRef.current.value = formatDate(date); 
+                  endRegRef.current.value = formatDate(date);
               }}
               customInput={
                 <input
                   ref={endRegRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none" 
+                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
                   placeholder="Select End Registration Date"
                 />
               }
               dateFormat="yyyy-MM-dd"
-              wrapperClassName="w-full" 
+              wrapperClassName="w-full"
             />
           </div>
 
@@ -128,22 +148,22 @@ const AddMarathon = () => {
             </label>
             <DatePicker
               name="marathonStartDate"
-              selected={marathonDate} 
+              selected={marathonDate}
               onChange={(date) => {
-                setMarathonDate(date); 
+                setMarathonDate(date);
                 if (startDateRef.current)
-                  startDateRef.current.value = formatDate(date); 
+                  startDateRef.current.value = formatDate(date);
               }}
               customInput={
                 <input
                   ref={startDateRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none" 
+                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
                   placeholder="Select Marathon Start Date"
                 />
               }
               dateFormat="yyyy-MM-dd"
-              wrapperClassName="w-full" 
+              wrapperClassName="w-full"
             />
           </div>
 

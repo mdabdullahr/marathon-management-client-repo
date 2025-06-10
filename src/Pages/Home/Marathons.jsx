@@ -30,13 +30,13 @@ const Marathons = () => {
           className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
         >
           {/* Image */}
-          {marathon.image && (
+          {marathon.marathonImage && (
             <div
               data-aos="zoom-in"
               className="w-full h-48 overflow-hidden rounded-xl"
             >
               <img
-                src={marathon.image}
+                src={marathon.marathonImage}
                 alt="card image"
                 className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-95"
               />
@@ -47,7 +47,7 @@ const Marathons = () => {
           <div className="space-y-3 px-1 mt-2">
             {/* Card Heading */}
             <h3 className="text-xl md:text-2xl font-medium text-gray-800 dark:text-white specific-text">
-              {marathon.title}
+              {marathon.marathonTitle}
             </h3>
 
             <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base">
@@ -55,8 +55,8 @@ const Marathons = () => {
             </p>
 
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              📅 Registration: {marathon.registrationStart} –{" "}
-              {marathon.registrationEnd}
+              📅 Registration: {marathon.startRegistrationDate} –{" "}
+              {marathon.endRegistrationDate}
             </p>
 
             {/* View Details Button */}
