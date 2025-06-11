@@ -60,7 +60,7 @@ const Registration = () => {
 
   // 
   if (loading) {
-    return <div className="py-24 text-center">Loading...</div>;
+    return <span className="loading loading-spinner loading-xl"></span>;
   }
 
   return (
