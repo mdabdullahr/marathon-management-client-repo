@@ -57,7 +57,7 @@ const AddMarathon = () => {
 
   return (
     <div className="my-10">
-      <form onSubmit={handleAddMarathon} className="space-y-5">
+      <form onSubmit={handleAddMarathon} className="space-y-5 bg-white dark:bg-gray-900 shadow-md shadow-gray-300 dark:shadow-gray-800 rounded-lg p-6 sm:p-8">
         <h2 className="text-center mb-10 text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 ">
           Add Marathon
         </h2>
@@ -65,7 +65,7 @@ const AddMarathon = () => {
           {/* Marathon title */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="marathonTitle"
             >
               Marathon Title <span className="text-red-500">*</span>
@@ -75,7 +75,7 @@ const AddMarathon = () => {
               name="marathonTitle"
               type="text"
               required
-              className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300  bg-gray-100 dark:bg-gray-800 focus:outline-none"
+              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter Marathon Title"
             />
           </div>
@@ -83,7 +83,7 @@ const AddMarathon = () => {
           {/* Start Registration Date */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="startRegistrationDate"
             >
               Start Registration Date <span className="text-red-500">*</span>
@@ -100,7 +100,7 @@ const AddMarathon = () => {
                 <input
                   ref={startRegRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select Start Registration Date"
                 />
               }
@@ -112,7 +112,7 @@ const AddMarathon = () => {
           {/* End Registration Date */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="endRegistrationDate"
             >
               End Registration Date <span className="text-red-500">*</span>
@@ -129,7 +129,7 @@ const AddMarathon = () => {
                 <input
                   ref={endRegRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select End Registration Date"
                 />
               }
@@ -141,7 +141,7 @@ const AddMarathon = () => {
           {/* Marathon Start Date */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="marathonStartDate"
             >
               Marathon Start Date <span className="text-red-500">*</span>
@@ -158,7 +158,7 @@ const AddMarathon = () => {
                 <input
                   ref={startDateRef}
                   required
-                  className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select Marathon Start Date"
                 />
               }
@@ -170,7 +170,7 @@ const AddMarathon = () => {
           {/* Location */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="location"
             >
               Location <span className="text-red-500">*</span>
@@ -180,7 +180,7 @@ const AddMarathon = () => {
               name="location"
               type="text"
               required
-              className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter Your Marathon Location"
             />
           </div>
@@ -188,7 +188,7 @@ const AddMarathon = () => {
           {/* Running Distance */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="runningDistance"
             >
               Running Distance
@@ -196,7 +196,7 @@ const AddMarathon = () => {
             <select
               id="runningDistance"
               name="runningDistance"
-              className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
             >
               {runningDistance.map((dis) => (
                 <option key={dis} value={dis}>
@@ -209,7 +209,7 @@ const AddMarathon = () => {
           {/* Marathon Image */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="marathonImage"
             >
               Marathon Image <span className="text-red-500">*</span>
@@ -220,14 +220,14 @@ const AddMarathon = () => {
               type="url"
               required
               placeholder="Enter Marathon Image URL"
-              className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
 
           {/* Created At */}
           <div>
             <label
-              className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+              className="block mb-1 text-gray-700 dark:text-gray-200"
               htmlFor="createdAt"
             >
               Created At <span className="text-red-500">*</span>
@@ -239,7 +239,7 @@ const AddMarathon = () => {
               required
               defaultValue={createdAtDefault}
               readOnly
-              className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 focus:outline-none"
+              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
         </div>
@@ -247,7 +247,7 @@ const AddMarathon = () => {
         {/* Description */}
         <div>
           <label
-            className="block mb-1 font-semibold text-gray-800 dark:text-gray-300"
+            className="block mb-1 text-gray-700 dark:text-gray-200"
             htmlFor="description"
           >
             Description <span className="text-red-500">*</span>
@@ -257,7 +257,7 @@ const AddMarathon = () => {
             name="description"
             required
             rows={4}
-            className="w-full rounded-md p-2 text-gray-800 dark:text-gray-300  bg-gray-100 dark:bg-gray-800 focus:outline-none"
+            className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
             placeholder="Write a brief description"
           />
         </div>
@@ -265,7 +265,7 @@ const AddMarathon = () => {
         {/* Create Button */}
         <button
           type="submit"
-          className="w-full cursor-pointer text-gray-300 dark:text-gray-800 text-xl font-semibold bg-gray-800 dark:bg-gray-300  py-3 rounded-md "
+          className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-lg font-medium transition "
         >
           Add
         </button>

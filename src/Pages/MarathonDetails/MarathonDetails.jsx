@@ -95,11 +95,18 @@ const MarathonDetails = () => {
 
         <p className="text-gray-600 dark:text-gray-200 text-sm lg:text-lg max-h-26 overflow-y-auto pr-2">
           <strong>Description :</strong> {marathon.description}
-        </p> 
+        </p>
 
         <button
           disabled={!isRegistrationOpen}
-          onClick={() => navigate(`/registration/${marathon._id}`)}
+          onClick={() =>
+            navigate(`/registration/${marathon._id}`, {
+              state: {
+                title: marathon.marathonTitle,
+                startDate: marathon.marathonStartDate,
+              },
+            })
+          }
           className={`mt-4 px-4 py-2 text-gray-300 dark:text-gray-800 specific-text text-sm md:text-xl rounded w-full ${
             isRegistrationOpen
               ? "bg-gray-800 dark:bg-gray-300 cursor-pointer"
