@@ -1,23 +1,68 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react"; 
 import { useLocation } from "react-router";
-import {AuthContext} from "../../Provider/AuthProvider.jsx"
+import { AuthContext } from "../../Provider/AuthProvider.jsx";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Registration = () => {
-    const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const location = useLocation();
-  const { title, startDate } = location.state || {};
-  
+  const { title, startDate, id } = location.state || {};
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (id && user?.email) {
+      axios
+        .post("http://localhost:3000/registrations", {
+          id,
+          email: user.email,
+          checkOnly: true,
+        })
+        .then((res) => {
+          setIsRegistered(res.data.alreadyRegistered);
+          setLoading(false);
+        })
+        .catch((err) => {
+          setLoading(false);
+        });
+    } else {
+      setLoading(false);
+    }
+  }, [id, user?.email]);
+
   const handleRegistration = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const RegistrationObj = Object.fromEntries(formData.entries());
-    console.log(RegistrationObj);
+    const registrationObj = Object.fromEntries(formData.entries());
+    const newRegistration = { id, ...registrationObj };
 
-    // Sent data to db
-    axios.post("")
+    axios
+      .post("http://localhost:3000/registrations", newRegistration)
+      .then((res) => {
+        if (res.data?.insertedId) {
+          Swal.fire({
+            title: "Registration Successfully!",
+            icon: "success",
+            draggable: true,
+          });
+          setIsRegistered(true);
+          form.reset();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed Registration. Please try again.");
+      });
+  };
+
+  // 
+  if (loading) {
+    return <div className="py-24 text-center">Loading...</div>;
   }
+
   return (
     <div className="py-24">
       <div className="max-w-4xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
@@ -126,9 +171,14 @@ const Registration = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-lg font-medium transition"
+              disabled={isRegistered}
+              className={`w-full cursor-pointer px-6 py-3 rounded text-lg font-medium transition ${
+                isRegistered
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700 text-white"
+              }`}
             >
-              Submit Registration
+              {isRegistered ? "Already Registered" : "Submit Registration"}{" "}
             </button>
           </form>
         </div>

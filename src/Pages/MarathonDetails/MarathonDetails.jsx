@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate } from "react-router";
 
 const MarathonDetails = () => {
   const marathon = useLoaderData();
+  console.log(marathon);
   const navigate = useNavigate();
 
   const isRegistrationOpen =
@@ -104,6 +105,7 @@ const MarathonDetails = () => {
               state: {
                 title: marathon.marathonTitle,
                 startDate: marathon.marathonStartDate,
+                id: marathon._id,
               },
             })
           }
