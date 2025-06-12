@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router";
 import Swal from "sweetalert2";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
@@ -116,6 +118,11 @@ const MyApplyListRow = ({ myApplyPromise }) => {
           </td>
           <td>{registration.startDate}</td>
           <th className="flex gap-4">
+            <Link to={`/marathon/${registration.id}`}>
+              <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]">
+                <BsFillInfoCircleFill size={20} color=" #17a2b8" />
+              </button>
+            </Link>
             <button
               onClick={() => {
                 setSelectedRegistration(registration);
