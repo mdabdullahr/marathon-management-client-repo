@@ -2,7 +2,6 @@ import React, { Suspense, useContext } from "react";
 import MyApplyListRow from "./MyApplyListRow";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { myApplyPromise } from "../../Api/MyApplyApi";
-import Lottie from "lottie-react";
 
 const MyApplyList = () => {
   const { user } = useContext(AuthContext);
@@ -21,7 +20,7 @@ const MyApplyList = () => {
             </tr>
           </thead>
           <tbody className="text-gray-800 dark:text-gray-200">
-            <Suspense fallback="Loading...">
+            <Suspense>
               <MyApplyListRow
                 myApplyPromise={myApplyPromise(user.email)}
               ></MyApplyListRow>
