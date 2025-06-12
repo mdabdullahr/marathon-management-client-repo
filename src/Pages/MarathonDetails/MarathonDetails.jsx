@@ -3,7 +3,6 @@ import { useLoaderData, useNavigate } from "react-router";
 
 const MarathonDetails = () => {
   const marathon = useLoaderData();
-  console.log(marathon);
   const navigate = useNavigate();
 
   const isRegistrationOpen =

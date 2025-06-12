@@ -9,7 +9,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const AddMarathon = () => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const [startRegDate, setStartRegDate] = useState(null);
   const [endRegDate, setEndRegDate] = useState(null);
@@ -34,7 +34,6 @@ const AddMarathon = () => {
     formObject.organizerName = user.displayName;
     formObject.organizerEmail = user.email;
 
-    console.log(formObject);
 
     // Sent Data To DB
     axios
@@ -56,11 +55,14 @@ const AddMarathon = () => {
   };
 
   return (
-    <div className="my-10">
-      <form onSubmit={handleAddMarathon} className="space-y-5 bg-white dark:bg-gray-900 shadow-md shadow-gray-300 dark:shadow-gray-800 rounded-lg p-6 sm:p-8">
-        <h2 className="text-center mb-10 text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 ">
-          Add Marathon
-        </h2>
+    <div data-aos="fade-left">
+      <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
+        Add Marathon
+      </h2>
+      <form
+        onSubmit={handleAddMarathon}
+        className="space-y-5 bg-white dark:bg-gray-900 shadow-md shadow-gray-300 dark:shadow-gray-800 rounded-lg p-6 sm:p-8"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Marathon title */}
           <div>

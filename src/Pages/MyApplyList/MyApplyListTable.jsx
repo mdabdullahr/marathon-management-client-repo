@@ -95,9 +95,9 @@ const MyApplyListRow = ({ myApplyPromise }) => {
     <>
       {registrations.length > 0 ? (
         <div className="overflow-x-auto my-10">
-          <table className="table">
+          <table className="table dark:table-zebra border border-gray-100 dark:border-gray-800">
             {/* head */}
-            <thead className="text-gray-800 dark:text-gray-200">
+            <thead className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
               <tr>
                 <th>#</th>
                 <th>Marathon Image, Title & location</th>
@@ -106,9 +106,9 @@ const MyApplyListRow = ({ myApplyPromise }) => {
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody className="text-gray-800 dark:text-gray-200">
+            <tbody className="text-gray-800 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
               {registrations.map((registration, index) => (
-                <tr key={registration._id}>
+                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800" key={registration._id}>
                   <th>
                     <label>{index + 1}</label>
                   </th>
@@ -182,8 +182,8 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       {isModalOpen && selectedRegistration && (
         <div className="fixed inset-0 z-50 flex items-center justify-center ">
           <div className="absolute inset-0 bg-transparent bg-opacity-10"></div>{" "}
-          <div className="relative mt-34 z-50 w-full max-w-lg rounded-2xl bg-white p-6 dark:bg-gray-800 dark:text-white shadow-xl">
-            <h2 className="text-xl font-bold mb-4">Update Registration</h2>
+          <div className="relative mt-72 z-50 w-full max-w-lg rounded-2xl bg-white p-6 dark:bg-gray-800 dark:text-white shadow-xl">
+            <h2 className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-4">Update Registration</h2>
             <form onSubmit={handleUpdate} className="space-y-5">
               {/* Row 1: Email */}
               <div className="w-full">
