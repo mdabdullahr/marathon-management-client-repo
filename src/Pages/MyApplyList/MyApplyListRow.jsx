@@ -5,6 +5,8 @@ import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
+import noData from "../../assets/Annimations/nodata.json";
+import Lottie from "lottie-react";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
   const [registrations, setRegistrations] = useState([]);
@@ -91,56 +93,91 @@ const MyApplyListRow = ({ myApplyPromise }) => {
 
   return (
     <>
-      {registrations.map((registration, index) => (
-        <tr key={registration._id}>
-          <th>
-            <label>{index + 1}</label>
-          </th>
-          <td>
-            <div className="flex items-center gap-3">
-              <div className="avatar">
-                <div className="mask mask-squircle h-12 w-12">
-                  <img src={registration.image} alt="Avatar" />
-                </div>
-              </div>
-              <div>
-                <div className="font-bold">{registration.marathonTitle}</div>
-                <div className="text-sm opacity-50">
-                  {registration.location}
-                </div>
-              </div>
-            </div>
-          </td>
-          <td>
-            {registration.firstName} {registration.lastName}
-            <br />
-            <span>{registration.contactNumber}</span>
-          </td>
-          <td>{registration.startDate}</td>
-          <th className="flex gap-4">
-            <Link to={`/marathon/${registration.id}`}>
-              <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]">
-                <BsFillInfoCircleFill size={20} color=" #17a2b8" />
-              </button>
-            </Link>
-            <button
-              onClick={() => {
-                setSelectedRegistration(registration);
-                setIsModalOpen(true);
-              }}
-              className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-            >
-              <FaPen size={20} color="#b182e3" />
-            </button>
-            <button
-              onClick={() => handleDelete(registration._id)}
-              className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-            >
-              <MdDelete size={20} color="#FF0000" />
-            </button>
-          </th>
-        </tr>
-      ))}
+      {registrations.length > 0 ? (
+        <div className="overflow-x-auto my-10">
+          <table className="table">
+            {/* head */}
+            <thead className="text-gray-800 dark:text-gray-200">
+              <tr>
+                <th>#</th>
+                <th>Marathon Image, Title & location</th>
+                <th>Your Name & Contact</th>
+                <th>Marathon Start Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-800 dark:text-gray-200">
+              {registrations.map((registration, index) => (
+                <tr key={registration._id}>
+                  <th>
+                    <label>{index + 1}</label>
+                  </th>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle h-12 w-12">
+                          <img src={registration.image} alt="Avatar" />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-bold">
+                          {registration.marathonTitle}
+                        </div>
+                        <div className="text-sm opacity-50">
+                          {registration.location}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    {registration.firstName} {registration.lastName}
+                    <br />
+                    <span>{registration.contactNumber}</span>
+                  </td>
+                  <td>{registration.startDate}</td>
+                  <th className="flex gap-4">
+                    <Link to={`/marathon/${registration.id}`}>
+                      <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]">
+                        <BsFillInfoCircleFill size={20} color=" #17a2b8" />
+                      </button>
+                    </Link>
+                    <button
+                      onClick={() => {
+                        setSelectedRegistration(registration);
+                        setIsModalOpen(true);
+                      }}
+                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
+                    >
+                      <FaPen size={20} color="#b182e3" />
+                    </button>
+                    <button
+                      onClick={() => handleDelete(registration._id)}
+                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
+                    >
+                      <MdDelete size={20} color="#FF0000" />
+                    </button>
+                  </th>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div className="my-10 flex flex-col items-center justify-center min-h-[300px]">
+          <div className="w-[300px] h-[300px]">
+            <Lottie animationData={noData} loop={true} />
+          </div>
+          <p className="text-lg font-medium text-gray-600 dark:text-gray-300 mt-4">
+            You have no registrations yet.
+          </p>
+          <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">
+            Join a marathon to see your applications here.
+          </p>
+          <Link to="/marathons">
+          <button className="px-4 py-2 bg-blue-600 text-white rounded cursor-pointer">All Marathons</button>
+          </Link>
+        </div>
+      )}
 
       {isModalOpen && selectedRegistration && (
         <div className="fixed inset-0 z-50 flex items-center justify-center ">
