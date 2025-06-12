@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 
 const RootLayouts = () => {
     return (
-        <div className='bg-white dark:bg-gray-900'>
+        <div className='bg-gray-50 dark:bg-gray-900'>
             <Navbar></Navbar>
             <div>
                 <Outlet></Outlet>

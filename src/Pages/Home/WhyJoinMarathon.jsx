@@ -1,33 +1,39 @@
 // src/components/WhyJoinMarathon.jsx
 import React from "react";
-import Lottie from "lottie-react";
-import whyJoinMarathon from "../../assets/Annimations/whyJoinMarathon.json";
 
 const WhyJoinMarathon = () => {
   return (
-    <section className="py-10">
+    <section className="py-12 mt-20 mb-32">
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-white specific-text"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200  specific-text"
           data-aos="fade-up"
         >
           Why Join a Marathon?
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/* Lottie Animation */}
-          <div
-            className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px]"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <Lottie animationData={whyJoinMarathon} loop={true} />
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mt-20">
+          <div className="flex-1" data-aos="fade-up" data-aos-delay="600">
+            <div className="w-full h-full lg:h-[400px] rounded-2xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Q-Hfw4gADx4?si=HC2kNyD62pvCAmyy"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
           {/* Text Content */}
           <ul
-            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-disc list-inside max-w-xl"
+            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-disc list-inside max-w-xl text-right flex-1"
             data-aos="fade-up"
           >
+            <h3 className="text-2xl md:text-3xl font-semibold text-indigo-600">
+              Start your marathon journey in basic Fundamental
+            </h3>
             <li data-aos="fade-right" data-aos-delay="100">
               Improve your physical health and endurance.
             </li>
@@ -43,10 +49,6 @@ const WhyJoinMarathon = () => {
             <li data-aos="fade-right" data-aos-delay="500">
               Experience personal achievement and celebration.
             </li>
-            <li data-aos="fade-right" data-aos-delay="600">
-              Build mental strength and resilience through long-distance
-              running.
-            </li>
             <li data-aos="fade-right" data-aos-delay="700">
               Explore new locations and enjoy scenic routes.
             </li>
@@ -55,9 +57,6 @@ const WhyJoinMarathon = () => {
             </li>
             <li data-aos="fade-right" data-aos-delay="900">
               Receive a finisher medal and race-day souvenirs.
-            </li>
-            <li data-aos="fade-right" data-aos-delay="1000">
-              Create unforgettable memories with friends and family.
             </li>
           </ul>
         </div>

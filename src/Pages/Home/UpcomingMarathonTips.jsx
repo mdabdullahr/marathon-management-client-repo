@@ -1,5 +1,4 @@
 import React from "react";
-import checklistAnimation from "../../assets/Annimations/upcoming-tips-checklist.json";
 import Lottie from "lottie-react";
 
 const UpcomingMarathonTips = () => {
@@ -12,43 +11,50 @@ const UpcomingMarathonTips = () => {
     "Eat a balanced meal rich in carbs the evening before race day.",
     "Warm up with light jogging and stretches before starting.",
     "Set a realistic pace — don’t go too fast at the beginning.",
-    "Listen to your body — walk if needed, and don’t overexert.",
-    "Apply anti-chafing products to prevent skin irritation.",
-    "Avoid trying anything new on race day (shoes, food, etc.).",
-    "Stay mentally focused and break the race into smaller goals.",
   ];
 
   return (
-    <section className="py-10">
+    <section className="py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-white specific-text"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200 specific-text"
           data-aos="fade-up"
         >
           Upcoming Marathon Tips
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10">
+        <div className="flex flex-col lg:flex-row items-center gap-20 mt-24">
+          <div
+            className="flex-1"
+            data-aos="fade-up"
+            data-aos-delay={tips.length * 100}
+          >
+            <div className="w-full h-full lg:h-[400px] rounded-2xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/8dsQhitYotk?si=JzB9BSC8_joitL_2"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
           {/* Tips List */}
           <ul
-            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-disc list-inside max-w-xl"
+            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-disc list-inside max-w-xl flex-1"
             data-aos="fade-up"
           >
+            <h3 className="text-2xl md:text-3xl font-semibold text-purple-600">
+              Kickstart your journey in <br /> a marathon
+            </h3>
             {tips.map((tip, idx) => (
               <li key={idx} data-aos="fade-left" data-aos-delay={idx * 100}>
                 {tip}
               </li>
             ))}
           </ul>
-
-          {/* Lottie Animation */}
-          <div
-            className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px]"
-            data-aos="fade-up"
-            data-aos-delay={tips.length * 100}
-          >
-            <Lottie animationData={checklistAnimation} loop={true} />
-          </div>
         </div>
       </div>
     </section>
