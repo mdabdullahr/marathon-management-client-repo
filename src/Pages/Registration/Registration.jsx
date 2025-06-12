@@ -82,7 +82,7 @@ const Registration = () => {
                 name="email"
                 defaultValue={user?.email || ""}
                 readOnly
-                className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               />
             </div>
 
@@ -97,7 +97,7 @@ const Registration = () => {
                   name="marathonTitle"
                   value={title || ""}
                   readOnly
-                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -110,7 +110,7 @@ const Registration = () => {
                   name="startDate"
                   value={startDate || ""}
                   readOnly
-                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
               </div>
             </div>

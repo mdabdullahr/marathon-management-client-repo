@@ -1,10 +1,46 @@
-import React, { use } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import Swal from "sweetalert2";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
-  const registrations = use(myApplyPromise);
-  console.log(registrations);
+   const [registrations, setRegistrations] = useState([]);
+
+  useEffect(() => {
+    myApplyPromise
+      .then((data) => {
+        setRegistrations(data);
+      })
+      .catch((err) => {
+        console.error("Error loading data", err);
+      });
+  }, [myApplyPromise]);
+
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:3000/registrations/${id}`).then((res) => {
+          if (res.data?.deletedCount) {
+            setRegistrations((prev) => prev.filter((item) => item._id !== id));
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
   return (
     <>
       {registrations.map((registration, index) => (
@@ -38,6 +74,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
               <FaPen size={20} color="#b182e3" />
             </button>
             <button
+              onClick={() => handleDelete(registration._id)}
               className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
             >
               <MdDelete size={20} color="#FF0000" />

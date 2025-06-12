@@ -75,7 +75,7 @@ const AddMarathon = () => {
               name="marathonTitle"
               type="text"
               required
-              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter Marathon Title"
             />
           </div>
@@ -100,7 +100,7 @@ const AddMarathon = () => {
                 <input
                   ref={startRegRef}
                   required
-                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select Start Registration Date"
                 />
               }
@@ -129,7 +129,7 @@ const AddMarathon = () => {
                 <input
                   ref={endRegRef}
                   required
-                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select End Registration Date"
                 />
               }
@@ -158,7 +158,7 @@ const AddMarathon = () => {
                 <input
                   ref={startDateRef}
                   required
-                  className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Select Marathon Start Date"
                 />
               }
@@ -180,7 +180,7 @@ const AddMarathon = () => {
               name="location"
               type="text"
               required
-              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               placeholder="Enter Your Marathon Location"
             />
           </div>
@@ -196,7 +196,7 @@ const AddMarathon = () => {
             <select
               id="runningDistance"
               name="runningDistance"
-              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             >
               {runningDistance.map((dis) => (
                 <option key={dis} value={dis}>
@@ -220,7 +220,7 @@ const AddMarathon = () => {
               type="url"
               required
               placeholder="Enter Marathon Image URL"
-              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
 
@@ -239,7 +239,7 @@ const AddMarathon = () => {
               required
               defaultValue={createdAtDefault}
               readOnly
-              className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
         </div>
@@ -257,7 +257,7 @@ const AddMarathon = () => {
             name="description"
             required
             rows={4}
-            className="w-full border px-3 py-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+            className="w-full border px-3 py-2 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             placeholder="Write a brief description"
           />
         </div>
