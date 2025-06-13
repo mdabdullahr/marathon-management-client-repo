@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { use, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
@@ -9,19 +9,12 @@ import noData from "../../assets/Annimations/nodata.json";
 import Lottie from "lottie-react";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
-  const [registrations, setRegistrations] = useState([]);
+  const data = use(myApplyPromise);
+  const [registrations, setRegistrations] = useState(data);
+
+  console.log(registrations);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    myApplyPromise
-      .then((data) => {
-        setRegistrations(data);
-      })
-      .catch((err) => {
-        console.error("Error loading data", err);
-      });
-  }, [myApplyPromise]);
 
   const handleDelete = (id) => {
     Swal.fire({

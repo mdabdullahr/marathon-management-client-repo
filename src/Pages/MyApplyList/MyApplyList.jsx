@@ -1,19 +1,25 @@
 import React, { Suspense } from "react";
 import MyApplyListTable from "./MyApplyListTable";
-import { AuthContext } from "../../Provider/AuthProvider";
-import { myApplyPromise } from "../../Api/MyApplyApi";
 import useAuth from "../../Hooks/useAuth";
+import useMyApply from "../../Api/useMyApply";
 
 const MyApplyList = () => {
-  const {user} = useAuth();
+  const { user } = useAuth();
+  const { myApplyPromise } = useMyApply();
   return (
     <div data-aos="fade-left">
       <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
         My Apply List
       </h2>
-      <Suspense>
+      <Suspense
+        fallback={
+          <div className="my-10 flex items-center justify-center min-h-[300px]">
+            <span className="loading loading-spinner loading-xl text-primary"></span>
+          </div>
+        }
+      >
         <MyApplyListTable
-          myApplyPromise={myApplyPromise(user.email, user.accessToken)}
+          myApplyPromise={myApplyPromise(user.email)}
         ></MyApplyListTable>
       </Suspense>
     </div>

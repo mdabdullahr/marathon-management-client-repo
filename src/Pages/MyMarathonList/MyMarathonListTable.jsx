@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
@@ -12,7 +12,8 @@ import DatePicker from "react-datepicker";
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const MyMarathonListTable = ({ myMarathonPromise }) => {
-  const [marathons, setMarathons] = useState([]);
+  const data = use(myMarathonPromise);
+  const [marathons, setMarathons] = useState(data);
   const [selectedMarathon, setSelectedMarathon] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [startRegDate, setStartRegDate] = useState(null);
@@ -40,16 +41,6 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
     return date.toISOString().split("T")[0];
   };
 
-  useEffect(() => {
-    myMarathonPromise
-      .then((data) => {
-        setMarathons(data);
-      })
-      .catch((err) => {
-        console.error("Error loading data", err);
-      });
-  }, [myMarathonPromise]);
-
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -63,7 +54,9 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
       if (result.isConfirmed) {
         axios.delete(`http://localhost:3000/marathons/${id}`).then((res) => {
           if (res.data?.deletedCount) {
-            setMarathons((prev) => prev.filter((item) => item._id !== id));
+            setMarathons((prev) =>
+                prev.filter((item) => item._id !== id)
+              );
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
@@ -194,7 +187,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
           <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">
             Join a marathon to see your applications here.
           </p>
-          <Link to="/addMarathon">
+          <Link to="/dashboard/addMarathon">
             <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
               Add Marathon
             </button>
