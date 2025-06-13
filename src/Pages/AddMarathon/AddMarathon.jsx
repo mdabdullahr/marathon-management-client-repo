@@ -1,15 +1,15 @@
 import axios from "axios";
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../Provider/AuthProvider";
+import useAuth from "../../Hooks/useAuth";
 
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const AddMarathon = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
 
   const [startRegDate, setStartRegDate] = useState(null);
   const [endRegDate, setEndRegDate] = useState(null);

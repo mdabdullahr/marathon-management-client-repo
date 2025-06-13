@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
-const Marathons = () => {
+const HomeMarathons = () => {
   const [marathons, setMarathons] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -93,4 +93,4 @@ const Marathons = () => {
   );
 };
 
-export default Marathons;
+export default HomeMarathons;

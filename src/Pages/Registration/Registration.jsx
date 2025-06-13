@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useContext } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import { useLocation } from "react-router";
-import { AuthContext } from "../../Provider/AuthProvider.jsx";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import useAuth from "../../Hooks/useAuth.jsx";
 
 const Registration = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
   const location = useLocation();
   const { title, startDate, id } = location.state || {};
   const [isRegistered, setIsRegistered] = useState(false);

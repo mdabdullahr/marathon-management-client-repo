@@ -1,12 +1,12 @@
-import { useContext } from "react";
+
 import { FaEnvelope, FaLock, FaPhotoVideo, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../Provider/AuthProvider";
+import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
-  const { createUser, updateUser, setUser } = useContext(AuthContext);
+  const { createUser, updateUser, setUser } = useAuth();
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();

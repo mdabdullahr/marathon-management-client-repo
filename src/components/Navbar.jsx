@@ -1,13 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import navLogo from "../assets/running.png";
 import { Link, NavLink } from "react-router";
 import DarkMoodToggoler from "./DarkMoodToggoler";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import useAuth from "../Hooks/useAuth";
 
 const Navbar = () => {
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user, logoutUser } = useAuth();
 
   const links = (
     <>

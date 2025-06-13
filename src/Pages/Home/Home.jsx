@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "./slider";
-import Marathons from "./Marathons";
+import HomeMarathons from "./HomeMarathons";
 import UpcomingMarathons from "./UpcommingMarathon";
 import UpcomingMarathonTips from "./UpcomingMarathonTips";
 import WhyJoinMarathon from "./WhyJoinMarathon";
@@ -21,7 +21,7 @@ const Home = () => {
           early.
         </p>
         <div className="mt-16 pb-10">
-        <Marathons></Marathons>
+        <HomeMarathons></HomeMarathons>
         </div>
       </section>
       <section >
