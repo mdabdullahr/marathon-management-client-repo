@@ -79,7 +79,7 @@ const UpcomingMarathons = () => {
       >
         Upcoming Marathons
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  px-10 md:px-16 lg:px-4 max-w-7xl mx-auto">
         {randomEvents.map((event) => (
           <div
             key={event.id}

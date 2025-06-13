@@ -43,7 +43,7 @@ const UpcomingMarathonTips = () => {
           </div>
           {/* Tips List */}
           <ul
-            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-disc list-inside max-w-xl flex-1"
+            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside max-w-xl flex-1"
             data-aos="fade-up"
           >
             <h3 className="text-2xl md:text-3xl font-semibold text-purple-600">

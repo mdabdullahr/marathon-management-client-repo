@@ -56,7 +56,7 @@ const AddMarathon = () => {
 
   return (
     <div data-aos="fade-left">
-      <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
+      <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
         Add Marathon
       </h2>
       <form
@@ -267,7 +267,7 @@ const AddMarathon = () => {
         {/* Create Button */}
         <button
           type="submit"
-          className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-lg font-medium transition "
+          className="w-full cursor-pointer  bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 rounded text-lg specific-text transition "
         >
           Add
         </button>

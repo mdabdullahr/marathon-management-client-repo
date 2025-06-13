@@ -13,14 +13,14 @@ const Home = () => {
         <h2 className="text-2xl dark:text-purple-200 text-gray-600 md:text-3xl lg:text-4xl specific-text text-center font-bold">
           Marathon's
         </h2>
-        <p className="text-center text-sm md:text-lg lg:text-xl mt-5 text-gray-600 dark:text-gray-400 max-w-7xl mx-auto">
+        <p className="text-center text-sm md:text-lg lg:text-xl mt-5 text-gray-600 dark:text-gray-400 max-w-5xl mx-auto">
           Discover some of the most exciting upcoming marathon events happening
           around you! Explore their location, dates, and essential details to
           find the perfect race that matches your pace. Don’t miss out —
           registration windows are limited, so be sure to secure your spot
           early.
         </p>
-        <div className="mt-10 pb-10">
+        <div className="mt-16 pb-10">
         <Marathons></Marathons>
         </div>
       </section>

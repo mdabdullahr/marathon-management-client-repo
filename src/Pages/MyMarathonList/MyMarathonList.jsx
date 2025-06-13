@@ -7,7 +7,7 @@ const MyMarathonList = () => {
   const { user } = useContext(AuthContext);
   return (
     <div data-aos="fade-left">
-      <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
+      <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
         My Marathons
       </h2>
       <Suspense>

@@ -194,9 +194,9 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
           <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">
             Join a marathon to see your applications here.
           </p>
-          <Link to="/marathons">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded cursor-pointer">
-              All Marathons
+          <Link to="/addMarathon">
+            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+              Add Marathon
             </button>
           </Link>
         </div>
@@ -426,7 +426,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded cursor-pointer"
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
                 >
                   Update
                 </button>

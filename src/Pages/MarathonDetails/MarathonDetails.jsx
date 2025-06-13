@@ -21,7 +21,7 @@ const MarathonDetails = () => {
         />
       </div>
       <div className="space-y-3 flex-1">
-        <h3 className="text-2xl dark:text-gray-300 text-gray-800 md:text-3xl specific-text font-bold">
+        <h3 className="text-2xl dark:text-purple-200 text-gray-600 md:text-3xl specific-text font-bold">
           {marathon.marathonTitle}
         </h3>
         <table className="w-full text-left border-separate border-spacing-y-2">
@@ -108,13 +108,13 @@ const MarathonDetails = () => {
               },
             })
           }
-          className={`mt-4 px-4 py-2 text-gray-300 dark:text-gray-800 specific-text text-sm md:text-xl rounded w-full ${
+          className={`mt-4 px-4 py-2 text-white font-semibold specific-text text-sm md:text-xl rounded w-full ${
             isRegistrationOpen
-              ? "bg-gray-800 dark:bg-gray-300 cursor-pointer"
+              ? "bg-gradient-to-r from-purple-600 to-indigo-600 cursor-pointer hover:from-purple-700 hover:to-indigo-700"
               : "bg-gray-400 cursor-not-allowed"
           }`}
         >
-          {isRegistrationOpen ? "Register Now" : "Registration Closed"}
+          {isRegistrationOpen ? "Registration Now" : "Registration Closed"}
         </button>
       </div>
     </div>
