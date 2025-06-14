@@ -14,10 +14,3 @@ const useAllMarathons = () => {
 };
 
 export default useAllMarathons;
-
-
-
-
-
-
-

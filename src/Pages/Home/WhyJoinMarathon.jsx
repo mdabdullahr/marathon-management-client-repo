@@ -4,7 +4,7 @@ import React from "react";
 const WhyJoinMarathon = () => {
   return (
     <section className="py-12 mt-20 mb-32">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1300px] mx-auto px-4">
         <h2
           className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200  specific-text"
           data-aos="fade-up"
