@@ -13,6 +13,10 @@ const Marathons = () => {
     });
   }, [allMarathonsPromise]);
 
+  useEffect(() => {
+      document.title = "Marathon Management | Marathons";
+    }, []);
+
   return (
     <div className="min-h-scree py-32 w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

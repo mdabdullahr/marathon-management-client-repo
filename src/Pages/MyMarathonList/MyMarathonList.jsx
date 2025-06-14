@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import MyMarathonListTable from "./MyMarathonListTable";
 import useAuth from "../../Hooks/useAuth";
 import useMyMarathon from "../../Api/useMyMarathon";
@@ -6,6 +6,11 @@ import useMyMarathon from "../../Api/useMyMarathon";
 const MyMarathonList = () => {
   const { user } = useAuth();
   const { myMarathonPromise } = useMyMarathon();
+
+  useEffect(() => {
+      document.title = "Marathon Management | Dashboard | My-Marathon-List";
+    }, []);
+
   return (
     <div data-aos="fade-left">
       <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">

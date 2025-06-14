@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import MyApplyListTable from "./MyApplyListTable";
 import useAuth from "../../Hooks/useAuth";
 import useMyApply from "../../Api/useMyApply";
@@ -6,6 +6,11 @@ import useMyApply from "../../Api/useMyApply";
 const MyApplyList = () => {
   const { user } = useAuth();
   const { myApplyPromise } = useMyApply();
+
+  useEffect(() => {
+      document.title = "Marathon Management | Dashboard | My-Apply-List";
+    }, []);
+
   return (
     <div data-aos="fade-left">
       <h2 className="text-center text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">

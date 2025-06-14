@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, Outlet } from "react-router";
 
 const Dashboard = () => {
+  useEffect(() => {
+      document.title = "Marathon Management | Dashboard";
+    }, []);
   return (
     <div className="min-h-screen pt-32">
       <div data-aos="fade-up" className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto flex flex-col lg:flex-row gap-5">
         {/* left aside */}
-        <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 bg-gradient-to-r from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 rounded-t-2xl">
+        <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 ">
           <h2 className="mb-10 text-2xl md:text-3xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gradient-to-r from-gray-200 to-white dark:from-gray-700 dark:to-gray-900 rounded-t-2xl p-4 text-center">
           All Links
         </h2>

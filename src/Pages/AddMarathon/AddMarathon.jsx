@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { toast } from "react-toastify";
@@ -52,6 +52,10 @@ const AddMarathon = () => {
         toast.error("Failed to add marathon. Please try again.");
       });
   };
+
+  useEffect(() => {
+      document.title = "Marathon Management | Dashboard | Add-Marathon";
+    }, []);
 
   return (
     <div data-aos="fade-left">
