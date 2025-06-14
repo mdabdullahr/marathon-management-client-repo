@@ -7,6 +7,7 @@ const useMyMarathon = () => {
   const myMarathonPromise = (email) => {
     return axiosSecure.get(`marathons?email=${email}`).then((res) => res.data);
   };
+
   return {
     myMarathonPromise,
   };

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { use, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
@@ -7,12 +6,12 @@ import { Link } from "react-router";
 import Swal from "sweetalert2";
 import noData from "../../assets/Annimations/nodata.json";
 import Lottie from "lottie-react";
+import useMyApply from "../../Api/useMyApply";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
   const data = use(myApplyPromise);
+  const {updateMyApplyPromise, deleteMyApplyPromise} = useMyApply();
   const [registrations, setRegistrations] = useState(data);
-
-  console.log(registrations);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,8 +26,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .delete(`http://localhost:3000/registrations/${id}`)
+          deleteMyApplyPromise(id)
           .then((res) => {
             if (res.data?.deletedCount) {
               setRegistrations((prev) =>
@@ -54,13 +52,8 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       contactNumber: form.contactNumber.value,
       additionalInfo: form.additionalInfo.value,
     };
-    console.log(updatedData);
 
-    axios
-      .patch(
-        `http://localhost:3000/registrations/${selectedRegistration._id}`,
-        updatedData
-      )
+      updateMyApplyPromise(selectedRegistration._id, updatedData)
       .then((res) => {
         if (res.data?.modifiedCount > 0) {
           setRegistrations((prev) =>

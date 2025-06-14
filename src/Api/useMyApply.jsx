@@ -7,8 +7,18 @@ const useMyApply = () => {
   const myApplyPromise = (email) => {
     return axiosSecure.get(`registrations?email=${email}`).then((res) => res.data);
   };
+
+  const updateMyApplyPromise = (id, updateData) =>{
+    return axiosSecure.patch(`registrations/${id}`, updateData);
+  };
+
+  const deleteMyApplyPromise = (id) =>{
+    return axiosSecure.delete(`registrations/${id}`);
+  }
   return {
-    myApplyPromise
+    myApplyPromise,
+    updateMyApplyPromise,
+    deleteMyApplyPromise
   };
 };
 
