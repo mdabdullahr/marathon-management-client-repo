@@ -14,7 +14,7 @@ const Home = () => {
       <Slider></Slider>
       <section
         data-aos="zoom-in"
-        className="w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto mt-10 lg:mt-20"
+        className="mt-10 lg:mt-20"
       >
         <h2 className="text-2xl dark:text-purple-200 text-gray-600 md:text-3xl lg:text-4xl specific-text text-center font-bold">
           Marathon's
