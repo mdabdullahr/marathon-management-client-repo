@@ -4,9 +4,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth.jsx";
+import useRegistrations from "../../Api/useRegistrations.jsx";
 
 const Registration = () => {
   const { user } = useAuth();
+  const {registrationsPromise} = useRegistrations();
   const location = useLocation();
   const { title, startDate, id } = location.state || {};
   const [isRegistered, setIsRegistered] = useState(false);
@@ -39,8 +41,7 @@ const Registration = () => {
     const registrationObj = Object.fromEntries(formData.entries());
     const newRegistration = { id, ...registrationObj };
 
-    axios
-      .post("http://localhost:3000/registrations", newRegistration)
+      registrationsPromise(newRegistration)
       .then((res) => {
         if (res.data?.insertedId) {
           Swal.fire({
