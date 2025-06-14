@@ -10,7 +10,7 @@ import useMyApply from "../../Api/useMyApply";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
   const data = use(myApplyPromise);
-  const {updateMyApplyPromise, deleteMyApplyPromise} = useMyApply();
+  const { updateMyApplyPromise, deleteMyApplyPromise } = useMyApply();
   const [registrations, setRegistrations] = useState(data);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,19 +26,16 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-          deleteMyApplyPromise(id)
-          .then((res) => {
-            if (res.data?.deletedCount) {
-              setRegistrations((prev) =>
-                prev.filter((item) => item._id !== id)
-              );
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          });
+        deleteMyApplyPromise(id).then((res) => {
+          if (res.data?.deletedCount) {
+            setRegistrations((prev) => prev.filter((item) => item._id !== id));
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        });
       }
     });
   };
@@ -53,7 +50,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       additionalInfo: form.additionalInfo.value,
     };
 
-      updateMyApplyPromise(selectedRegistration._id, updatedData)
+    updateMyApplyPromise(selectedRegistration._id, updatedData)
       .then((res) => {
         if (res.data?.modifiedCount > 0) {
           setRegistrations((prev) =>
@@ -77,6 +74,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       });
   };
 
+
   return (
     <>
       {registrations.length > 0 ? (
@@ -94,7 +92,10 @@ const MyApplyListRow = ({ myApplyPromise }) => {
             </thead>
             <tbody className="text-gray-800 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
               {registrations.map((registration, index) => (
-                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800" key={registration._id}>
+                <tr
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
+                  key={registration._id}
+                >
                   <th>
                     <label>{index + 1}</label>
                   </th>
@@ -160,7 +161,9 @@ const MyApplyListRow = ({ myApplyPromise }) => {
             Join a marathon to see your applications here.
           </p>
           <Link to="/marathons">
-          <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">All Marathons</button>
+            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+              All Marathons
+            </button>
           </Link>
         </div>
       )}
@@ -169,7 +172,9 @@ const MyApplyListRow = ({ myApplyPromise }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center ">
           <div className="absolute inset-0 bg-transparent bg-opacity-10"></div>{" "}
           <div className="relative mt-72 z-50 w-full max-w-lg rounded-2xl bg-white p-6 dark:bg-gray-800 dark:text-white shadow-xl">
-            <h2 className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-4">Update Registration</h2>
+            <h2 className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-4">
+              Update Registration
+            </h2>
             <form onSubmit={handleUpdate} className="space-y-5">
               {/* Row 1: Email */}
               <div className="w-full">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"; 
 import { useLocation } from "react-router";
-import axios from "axios";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth.jsx";
@@ -16,23 +15,23 @@ const Registration = () => {
 
   useEffect(() => {
     if (id && user?.email) {
-      axios
-        .post("http://localhost:3000/registrations", {
+      registrationsPromise({
           id,
           email: user.email,
           checkOnly: true,
-        })
+      })
         .then((res) => {
           setIsRegistered(res.data.alreadyRegistered);
           setLoading(false);
         })
         .catch((err) => {
+          console.log(err);
           setLoading(false);
         });
     } else {
       setLoading(false);
     }
-  }, [id, user?.email]);
+  }, [id, user?.email, registrationsPromise]);
 
   const handleRegistration = (e) => {
     e.preventDefault();

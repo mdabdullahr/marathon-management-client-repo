@@ -37,7 +37,7 @@ const Dashboard = () => {
         </div>
 
         {/* Right aside */}
-        <div data-aos="fade-left" className=" w-full lg:w-[70%] px-5  border-0  lg:border-l border-gray-200 dark:border-gray-800 lg:min-h-[80vh]">
+        <div data-aos="fade-left" className=" w-full lg:w-[70%] px-5  border-0  lg:border-l border-gray-200 dark:border-gray-900 lg:min-h-[80vh]">
           <div>
             <Outlet></Outlet>
           </div>

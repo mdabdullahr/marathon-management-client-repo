@@ -4,8 +4,8 @@ import useAxiosSecure from "../Hooks/useAxiosSecure";
 const useMyApply = () => {
   const axiosSecure = useAxiosSecure();
 
-  const myApplyPromise = (email) => {
-    return axiosSecure.get(`registrations?email=${email}`).then((res) => res.data);
+  const myApplyPromise = (email, searchText) => {
+    return axiosSecure.get(`registrations?email=${email}&search=${searchText}`).then((res) => res.data);
   };
 
   const updateMyApplyPromise = (id, updateData) =>{

@@ -6,7 +6,7 @@ const useAddMarathon = () => {
     const axiosSecure = useAxiosSecure();
 
     const myMarathonPromise = (newMarathon) => {
-        return axiosSecure.post("marathons", newMarathon)
+        return axiosSecure.post("marathons", newMarathon);
     }
     return {
         myMarathonPromise

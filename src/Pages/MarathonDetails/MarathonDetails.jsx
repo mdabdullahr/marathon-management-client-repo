@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import useMarathonDetail from "../../Api/useMarathonDetail";
 
@@ -8,15 +8,15 @@ const MarathonDetails = () => {
   const [marathon, setMarathon] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(()=>{
+  useEffect(() => {
     marathonDetailPromise(id)
-    .then(data => {
-      setMarathon(data)
-    })
-    .catch(err =>{
-      console.log(err);
-    })
-  },[id, marathonDetailPromise])
+      .then((data) => {
+        setMarathon(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [id, marathonDetailPromise]);
 
   const isRegistrationOpen =
     new Date() >= new Date(marathon.startRegistrationDate) &&
@@ -69,6 +69,14 @@ const MarathonDetails = () => {
               </td>
               <td className="text-gray-600 dark:text-gray-200">
                 : {marathon.marathonStartDate}
+              </td>
+            </tr>
+            <tr>
+              <td className="font-semibold text-gray-700 dark:text-gray-300">
+                Marathon Create Date
+              </td>
+              <td className="text-gray-600 dark:text-gray-200">
+                : {marathon.createdAt}
               </td>
             </tr>
             <tr>
