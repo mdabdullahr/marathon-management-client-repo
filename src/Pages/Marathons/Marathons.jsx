@@ -1,8 +1,17 @@
-import React from "react";
-import { Link, useLoaderData } from "react-router";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
+import useAllMarathons from "../../Api/useAllMarathons";
 
 const Marathons = () => {
-  const allMarathons = useLoaderData();
+  const { allMarathonsPromise } = useAllMarathons();
+  const [allMarathons, setAllMarathons] = useState([]);
+
+  useEffect(() => {
+    allMarathonsPromise()
+    .then(data => {
+      setAllMarathons(data)
+    });
+  }, [allMarathonsPromise]);
 
   return (
     <div className="min-h-scree py-32 w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto">

@@ -8,8 +8,17 @@ const useMyMarathon = () => {
     return axiosSecure.get(`marathons?email=${email}`).then((res) => res.data);
   };
 
+  const updateMyMarathonPromise = (id, updatedData) => {
+    return axiosSecure.put(`marathons/${id}`, updatedData);
+  };
+
+  const deleteMyMarathonPromise = (id) => {
+    return axiosSecure.delete(`marathons/${id}`);
+  }
   return {
     myMarathonPromise,
+    updateMyMarathonPromise,
+    deleteMyMarathonPromise
   };
 };
 

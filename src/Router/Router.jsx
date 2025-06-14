@@ -28,7 +28,6 @@ export const router = createBrowserRouter([
       },
       {
         path: "/marathons",
-        loader: () => fetch("http://localhost:3000/all-marathons"),
         element: (
           <PrivateRoutes>
             <Marathons></Marathons>

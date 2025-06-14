@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { use, useEffect, useRef, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
@@ -8,11 +7,13 @@ import Swal from "sweetalert2";
 import noData from "../../assets/Annimations/nodata.json";
 import Lottie from "lottie-react";
 import DatePicker from "react-datepicker";
+import useMyMarathon from "../../Api/useMyMarathon";
 
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const MyMarathonListTable = ({ myMarathonPromise }) => {
   const data = use(myMarathonPromise);
+  const {updateMyMarathonPromise, deleteMyMarathonPromise} = useMyMarathon();
   const [marathons, setMarathons] = useState(data);
   const [selectedMarathon, setSelectedMarathon] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,7 +53,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3000/marathons/${id}`).then((res) => {
+        deleteMyMarathonPromise(id).then((res) => {
           if (res.data?.deletedCount) {
             setMarathons((prev) =>
                 prev.filter((item) => item._id !== id)
@@ -74,11 +75,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
     const formData = new FormData(form);
     const updatedData = Object.fromEntries(formData.entries());
     
-    axios
-      .put(
-        `http://localhost:3000/marathons/${selectedMarathon._id}`,
-        updatedData
-      )
+      updateMyMarathonPromise(selectedMarathon._id, updatedData)
       .then((res) => {
         if (res.data?.modifiedCount > 0) {
           setMarathons((prev) =>
