@@ -41,9 +41,7 @@ export const router = createBrowserRouter([
           <PrivateRoutes>
             <MarathonDetails></MarathonDetails>
           </PrivateRoutes>
-        ),
-        loader: ({ params }) =>
-          fetch(`http://localhost:3000/all-marathons/${params.id}`),
+        )
       },
       {
         path: "/registration/:id",

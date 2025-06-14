@@ -1,9 +1,22 @@
-import React from "react";
-import { useLoaderData, useNavigate } from "react-router";
+import React, {useState, useEffect} from "react";
+import { useNavigate, useParams } from "react-router";
+import useMarathonDetail from "../../Api/useMarathonDetail";
 
 const MarathonDetails = () => {
-  const marathon = useLoaderData();
+  const { id } = useParams();
+  const { marathonDetailPromise } = useMarathonDetail();
+  const [marathon, setMarathon] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    marathonDetailPromise(id)
+    .then(data => {
+      setMarathon(data)
+    })
+    .catch(err =>{
+      console.log(err);
+    })
+  },[id, marathonDetailPromise])
 
   const isRegistrationOpen =
     new Date() >= new Date(marathon.startRegistrationDate) &&
