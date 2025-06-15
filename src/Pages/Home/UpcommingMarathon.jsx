@@ -72,14 +72,14 @@ const UpcomingMarathons = () => {
   const randomEvents = useMemo(() => getRandomItems(marathonEvents, 6), []);
 
   return (
-    <section className="py-12">
+    <section className="py-0 lg:py-12">
       <h2
         data-aos="fade-up"
-        className="text-3xl md:text-4xl font-extrabold text-center mb-20 text-gray-700 dark:text-purple-200"
+        className="text-xl md:text-3xl lg:text-4xl font-extrabold text-center mb-10 lg:mb-20 text-gray-700 dark:text-purple-200 px-2"
       >
         Upcoming Marathons
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 max-w-[1300px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 px-4 max-w-[1300px] mx-auto">
         {randomEvents.map((event) => (
           <div
             key={event.id}

@@ -50,13 +50,13 @@ const Navbar = () => {
   };
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-transparent bg-opacity-50 backdrop-blur-md">
-      <div className="navbar w-11/12 mx-auto py-3">
+      <div className="navbar w-full md:w-11/12 mx-auto px-2 md:px-0 py-3">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn lg:hidden">
+            <div tabIndex={0} role="button" className="lg:hidden text-black dark:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-7 w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -77,13 +77,12 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            className="w-8 h-8 lg:w-16 lg:h-16 object-cover"
+            className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover ml-2"
             src={navLogo}
             alt="Nav Logo"
           />
           <h3
-            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent
- hidden md:block"
+            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent hidden md:block"
           >
             Marathon's
           </h3>
@@ -95,7 +94,7 @@ const Navbar = () => {
           {user && (
             <div className="relative group">
               <img
-                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-gray-800 dark:border-gray-300"
+                className="w-8 h-8 md:w-12 md:h-12 object-cover rounded-full border border-gray-800 dark:border-gray-300"
                 src={user.photoURL}
                 alt="userImg"
               />
@@ -138,7 +137,7 @@ const Navbar = () => {
           {user && (
             <div className="relative group mr-3 lg:mr-0">
               <img
-                className="w-8 md:w-12 h-8 md:h-12 rounded-full border border-green-600"
+                className="w-8 h-8 md:w-12 md:h-12 object-cover rounded-full border border-gray-800 dark:border-gray-300"
                 src={user.photoURL}
                 alt="userImg"
               />
@@ -160,7 +159,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
                 >
                   Login
                 </button>{" "}

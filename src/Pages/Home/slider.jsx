@@ -38,7 +38,7 @@ const Slider = () => {
               <p className="text-sm md:text-lg lg:text-2xl text-white max-w-2xl mb-6">
                 Experience thrilling local sports events and competitions  Participate in exciting city-wide marathons and challenge your endurance alongside hundreds of runners.
               </p>
-              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold text-lg"><Link to="/marathons">Browse Marathons</Link></button>
+              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold text-xs md:text-sm lg:text-lg"><Link to="/marathons">Browse Marathons</Link></button>
             </div>
           </div>
         </SwiperSlide>
@@ -59,7 +59,7 @@ const Slider = () => {
               <p className="text-sm md:text-lg lg:text-2xl text-white max-w-2xl mb-6">
                 Explore local creativity through stunning art pieces. Register, track, and organize your marathon events from a personalized dashboard designed just for you.
               </p>
-              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold text-lg"><Link to="/dashboard">View Dashboard</Link></button>
+              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold text-xs md:text-sm lg:text-lg"><Link to="/dashboard">View Dashboard</Link></button>
             </div>
           </div>
         </SwiperSlide>
@@ -80,7 +80,7 @@ const Slider = () => {
               <p className="text-sm md:text-lg lg:text-2xl text-white max-w-2xl mb-6">
                 View your applied marathons, see event details, and keep track of your achievements all from your profile.
               </p>
-              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold text-lg"><Link to="/dashboard/myApplyList">My Applications</Link></button>
+              <button className="text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-lg font-semibold  text-xs md:text-sm lg:text-lg"><Link to="/dashboard/myApplyList">My Applications</Link></button>
             </div>
           </div>
         </SwiperSlide>

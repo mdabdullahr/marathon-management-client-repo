@@ -14,16 +14,16 @@ const UpcomingMarathonTips = () => {
   ];
 
   return (
-    <section className="py-12 mt-20">
+    <section className="py-0 lg:py-12 mt-20">
       <div className="max-w-[1300px] mx-auto px-4">
         <h2
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200 specific-text"
+          className="text-xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200 specific-text px-2"
           data-aos="fade-up"
         >
           Upcoming Marathon Tips
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center gap-20 mt-24">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 mt-10 lg:mt-24">
           <div
             className="flex-1"
             data-aos="fade-up"
@@ -44,10 +44,10 @@ const UpcomingMarathonTips = () => {
           {/* Tips List */}
           <div className="flex-1">
             <ul
-              className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside  "
+              className="space-y-4 text-gray-700 dark:text-gray-300 text-sm md:text-lg list-none list-inside  "
               data-aos="fade-up"
             >
-              <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Kickstart your journey in <br /> a marathon
               </h3>
               {tips.map((tip, idx) => (
