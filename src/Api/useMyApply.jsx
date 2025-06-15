@@ -4,7 +4,6 @@ const useMyApply = () => {
   const axiosSecure = useAxiosSecure();
 
   const myApplyPromise = (email, searchText) => {
-    console.log(searchText);
     return axiosSecure
       .get(`registrations?email=${email}&search=${searchText}`)
       .then((res) => res.data);

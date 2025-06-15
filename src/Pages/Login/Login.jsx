@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { ImEye } from "react-icons/im";
@@ -47,6 +47,11 @@ const Login = () => {
       toast.error("Google Login fail " + err.message)
     })
   };
+
+   useEffect(() => {
+    document.title = "Marathon Management | Login";
+  }, []);
+
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center"

@@ -48,9 +48,7 @@ const Footer = () => {
               alt=""
             />
             <h4
-              className={`text-2xl font-bold text-gray-800 dark:text-gray-300 specific-text ${
-                isDark ? "text-gray-400" : ""
-              }`}
+              className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent specific-text"
             >
               Marathon's Management
             </h4>
@@ -71,7 +69,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-2">
           <h3
             className={`text-lg md:text-2xl font-semibold mt-8 mb-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
+              isDark ? "text-gray-300" : "text-gray-600"
             }`}
           >
             Useful Links
@@ -118,7 +116,7 @@ const Footer = () => {
         <div>
           <h3
             className={`text-lg md:text-2xl font-semibold mt-8 mb-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
+              isDark ? "text-gray-300" : "text-gray-600"
             }`}
           >
             Follow Us

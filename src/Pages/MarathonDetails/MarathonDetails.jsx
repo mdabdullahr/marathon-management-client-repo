@@ -22,6 +22,10 @@ const MarathonDetails = () => {
   const startDateTime = marathon?.marathonStartDate
   ? new Date(marathon.marathonStartDate + "T00:00:00")
   : null;
+
+   useEffect(() => {
+    document.title = "Marathon Management | Marathon-Details";
+  }, []);
   
 
   return (

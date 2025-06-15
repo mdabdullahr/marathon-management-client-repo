@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
@@ -10,10 +10,16 @@ import useMyApply from "../../Api/useMyApply";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
   const data = use(myApplyPromise);
+  console.log(data);
   const { updateMyApplyPromise, deleteMyApplyPromise } = useMyApply();
-  const [registrations, setRegistrations] = useState(data);
+  const [registrations, setRegistrations] = useState([]);
+  console.log(registrations);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(()=>{
+    setRegistrations(data)
+  },[data])
 
   const handleDelete = (id) => {
     Swal.fire({

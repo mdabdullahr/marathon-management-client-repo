@@ -4,6 +4,7 @@ const PrivacyPolicy = () => {
   useEffect(() => {
     document.title = "Marathon Management | Privacy-Policy";
   }, []);
+  
   return (
     <div data-aos="zoom-in" className="py-24 bg-white dark:bg-gray-900 px-5 lg:px-0">
       <div

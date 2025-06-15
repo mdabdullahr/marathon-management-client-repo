@@ -13,20 +13,20 @@ const Navbar = () => {
   const links = (
     <>
       <li
-        className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
+        className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/">Home</NavLink>
       </li>
       <li
-        className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
+        className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/marathons">Marathons</NavLink>
       </li>
       {user && (
         <li
-          className="text-lg text-gray-800 dark:text-gray-300 font-medium lg:text-xl
+          className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
  md:text-xl"
         >
           <NavLink to="/dashboard">Dashboard</NavLink>
@@ -82,10 +82,10 @@ const Navbar = () => {
             alt="Nav Logo"
           />
           <h3
-            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold dark:text-gray-300 text-gray-800
+            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent
  hidden md:block"
           >
-            Marathon<span className="text-orange-700">'</span>s 
+            Marathon's
           </h3>
         </div>
 
@@ -108,7 +108,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Logout
             </button>
@@ -117,7 +117,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Login
                 </button>{" "}
@@ -125,7 +125,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Register
                 </button>
@@ -151,7 +151,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Logout
             </button>
@@ -160,7 +160,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Login
                 </button>{" "}
@@ -168,7 +168,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="text-gray-300 dark:text-gray-800 bg-gray-800 dark:bg-gray-300 specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
                 >
                   Register
                 </button>

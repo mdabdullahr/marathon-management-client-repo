@@ -27,11 +27,12 @@ const WhyJoinMarathon = () => {
             </div>
           </div>
           {/* Text Content */}
-          <ul
-            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside max-w-xl text-right flex-1"
+         <div className="flex-1">
+           <ul
+            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside  text-right"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl md:text-3xl font-semibold text-indigo-600">
+            <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Start your marathon journey in basic Fundamental
             </h3>
             <li data-aos="fade-right" data-aos-delay="100">
@@ -59,6 +60,7 @@ const WhyJoinMarathon = () => {
               Receive a finisher medal and race-day souvenirs.
             </li>
           </ul>
+         </div>
         </div>
       </div>
     </section>

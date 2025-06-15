@@ -58,7 +58,11 @@ const Registration = () => {
       });
   };
 
-  // 
+
+   useEffect(() => {
+    document.title = "Marathon Management | Registration";
+  }, []);
+
   if (loading) {
     return <span className="loading loading-spinner loading-xl"></span>;
   }

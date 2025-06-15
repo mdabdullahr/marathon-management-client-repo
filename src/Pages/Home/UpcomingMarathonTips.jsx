@@ -42,19 +42,21 @@ const UpcomingMarathonTips = () => {
             </div>
           </div>
           {/* Tips List */}
-          <ul
-            className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside max-w-xl flex-1"
-            data-aos="fade-up"
-          >
-            <h3 className="text-2xl md:text-3xl font-semibold text-purple-600">
-              Kickstart your journey in <br /> a marathon
-            </h3>
-            {tips.map((tip, idx) => (
-              <li key={idx} data-aos="fade-left" data-aos-delay={idx * 100}>
-                {tip}
-              </li>
-            ))}
-          </ul>
+          <div className="flex-1">
+            <ul
+              className="space-y-4 text-gray-700 dark:text-gray-300 text-lg list-none list-inside  "
+              data-aos="fade-up"
+            >
+              <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Kickstart your journey in <br /> a marathon
+              </h3>
+              {tips.map((tip, idx) => (
+                <li key={idx} data-aos="fade-left" data-aos-delay={idx * 100}>
+                  {tip}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

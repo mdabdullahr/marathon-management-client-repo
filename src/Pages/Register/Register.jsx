@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
+import { useEffect } from "react";
 
 const Register = () => {
   const { createUser, updateUser, setUser } = useAuth();
@@ -54,6 +55,11 @@ const Register = () => {
         toast.error("Register fail" + errorMessage);
       });
   };
+
+   useEffect(() => {
+    document.title = "Marathon Management | Register";
+  }, []);
+
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center"
