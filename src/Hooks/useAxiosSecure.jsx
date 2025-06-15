@@ -1,11 +1,10 @@
 import axios from "axios";
-import React from "react";
-import useAuth from "./useAuth";
-import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import useAuth from "./useAuth";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "https://marathone-management-server.vercel.app/",
 });
 
 const useAxiosSecure = () => {
@@ -13,7 +12,7 @@ const useAxiosSecure = () => {
 
   // Request Interceptors
   axiosInstance.interceptors.request.use((config) => {
-    config.headers.authorization = `Bearer ${user.accessToken}`
+    config.headers.authorization = `Bearer ${user.accessToken}`;
     return config;
   });
 
