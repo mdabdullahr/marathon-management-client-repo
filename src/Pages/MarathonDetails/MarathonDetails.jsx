@@ -31,7 +31,7 @@ const MarathonDetails = () => {
   return (
     <div
       data-aos="fade-up"
-      className="py-32 px-5 w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-8"
+      className="py-32 px-5 w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-8 overflow-x-hidden"
     >
       <div className="flex-1">
         <img
@@ -41,8 +41,8 @@ const MarathonDetails = () => {
         />
       </div>
 
-      <div className="space-y-3 flex-1">
-        <h3 className="text-2xl dark:text-purple-200 text-gray-600 md:text-3xl specific-text font-bold">
+      <div className="space-y-3 flex-1 px-2 lg:px-0">
+        <h3 className="text-xl lg:text-2xl dark:text-purple-200 text-gray-600 md:text-3xl specific-text font-bold">
           {marathon.marathonTitle}
         </h3>
 
@@ -53,15 +53,15 @@ const MarathonDetails = () => {
 
         <table className="w-full text-left border-separate border-spacing-y-2">
           <tbody>
-            <tr>
-              <td className="font-semibold text-gray-700 dark:text-gray-300">
+            <tr className="text-sm lg:text-lg">
+              <td className="font-semibold text-gray-700 dark:text-gray-300 text-sm">
                 Location
               </td>
               <td className="text-gray-600 dark:text-gray-200">
                 : {marathon.location}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Start Registration Date
               </td>
@@ -69,7 +69,7 @@ const MarathonDetails = () => {
                 : {marathon.startRegistrationDate}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 End Registration Date
               </td>
@@ -77,7 +77,7 @@ const MarathonDetails = () => {
                 : {marathon.endRegistrationDate}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Marathon Start Date
               </td>
@@ -85,7 +85,7 @@ const MarathonDetails = () => {
                 : {marathon.marathonStartDate}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Marathon Create Date
               </td>
@@ -93,7 +93,7 @@ const MarathonDetails = () => {
                 : {marathon.createdAt}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Running Distance
               </td>
@@ -101,7 +101,7 @@ const MarathonDetails = () => {
                 : {marathon.runningDistance}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Total Registrations
               </td>
@@ -109,7 +109,7 @@ const MarathonDetails = () => {
                 : {marathon.registrationsCount}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg hidden md:block">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Organizer Name
               </td>
@@ -117,7 +117,7 @@ const MarathonDetails = () => {
                 : {marathon.organizerName}
               </td>
             </tr>
-            <tr>
+            <tr className="text-sm lg:text-lg hidden md:block">
               <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Organizer Email
               </td>

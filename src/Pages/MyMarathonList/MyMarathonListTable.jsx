@@ -108,9 +108,9 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
             <thead className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
               <tr>
                 <th>#</th>
-                <th>Title</th>
+                <th>Marathon Image, Title & Location</th>
                 <th>Distance</th>
-                <th>Registration</th>
+                <th className="hidden lg:block">Registration</th>
                 <th>Start Date</th>
                 <th>Actions</th>
               </tr>
@@ -144,7 +144,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
                   <td>
                     {marathon.runningDistance} {marathon.lastName}
                   </td>
-                  <td>{marathon.registrationsCount}</td>
+                  <td className="hidden lg:block">{marathon.registrationsCount}</td>
                   <td>{marathon.marathonStartDate}</td>
                   <th className="flex gap-4">
                     <Link to={`/marathon/${marathon._id}`}>

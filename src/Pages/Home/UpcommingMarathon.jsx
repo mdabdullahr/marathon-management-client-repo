@@ -81,11 +81,10 @@ const UpcomingMarathons = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 px-4 max-w-[1300px] mx-auto">
         {randomEvents.map((event) => (
-          <div data-aos="fade-up" className="card-wrapper ">
+          <div data-aos="fade-up" className="card-wrapper">
           <div
             key={event.id}
-            
-            className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform card-content"
+            className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform card-content lg:h-[340px]"
           >
             <img
               src={event.image}

@@ -71,7 +71,7 @@ const Registration = () => {
     <div className="py-24">
       <div data-aos="fade-up" className="max-w-4xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
         <div className="bg-white dark:bg-gray-900 shadow-md shadow-gray-300 dark:shadow-gray-800 rounded-lg p-6 sm:p-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-600 dark:text-purple-200 specific-text">
+          <h2 className=" text-lg md:text-xl lg:text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-600 dark:text-purple-200 specific-text">
             Marathon Registration
           </h2>
 
@@ -176,7 +176,7 @@ const Registration = () => {
             <button
               type="submit"
               disabled={isRegistered}
-              className={`w-full cursor-pointer px-6 py-3 rounded text-lg font-medium transition ${
+              className={`w-full cursor-pointer px-6 py-3 rounded text-sm lg:text-lg font-normal lg:font-medium transition ${
                 isRegistered
                   ? "bg-gray-400 cursor-not-allowed"
                   : "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 font-semibold specific-text text-white"

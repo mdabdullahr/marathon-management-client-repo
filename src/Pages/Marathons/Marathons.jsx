@@ -76,15 +76,15 @@ const Marathons = () => {
 
             <div className="flex flex-col justify-between flex-1 p-6 z-20 relative">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white">
                   {marathon.marathonTitle}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-300 font-medium">
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-sm md:text-lg">
                   📍 {marathon.location}
                 </p>
 
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg">
                   📅 Registration Start:{" "}
                   <span className="font-semibold text-gray-700 dark:text-gray-200">
                     {new Date(
@@ -97,7 +97,7 @@ const Marathons = () => {
                   </span>
                 </p>
 
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg">
                   📅 Registration End:{" "}
                   <span className="font-semibold text-gray-700 dark:text-gray-200">
                     {new Date(marathon.endRegistrationDate).toLocaleDateString(
@@ -111,7 +111,7 @@ const Marathons = () => {
                   </span>
                 </p>
 
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400 hidden lg:block">
                   🏁 Marathon Start Date:{" "}
                   <span className="font-semibold text-gray-700 dark:text-gray-200">
                     {new Date(marathon.marathonStartDate).toLocaleDateString(
@@ -128,7 +128,7 @@ const Marathons = () => {
 
               <Link
                 to={`/marathon/${marathon._id}`}
-                className="mt-6 block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-xl rounded-br-none transition duration-300"
+                className="mt-2 lg:mt-6 block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-normal lg:font-semibold py-2 lg:py-3 text-sm lg:text-lg rounded-xl rounded-br-none transition duration-300"
               >
                 View Details
               </Link>
