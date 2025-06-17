@@ -1,12 +1,29 @@
-# React + Vite
+# 🏃 Marathon Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [https://marathons-management.web.app/]
 
-Currently, two official plugins are available:
+Marathon Management System is a feature-rich event-based web application where users can create, explore, and register for marathon events. The platform offers a responsive design, user-friendly interface, and real-time interactive features to ensure a seamless user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Authentication & Authorization:** Secure login system with email/password and Google sign-in along with protected private routes.
+- 🏁 **Dynamic Marathon Creation:** Logged-in users can create new marathon events with all essential information saved in the database.
+- 📅 **Live Countdown Timer:** Real-time countdown showing days, hours, and minutes left before each marathon starts.
+- 🔍 **Search & Sort Features:** Users can search for their registered marathons and sort events based on creation date (newest to oldest or vice versa).
+- 📋 **User-Specific Dashboards:** Each user has a personalized dashboard to manage their created and registered marathons.
+
+---
+
+## 🛠 Tech Stack (Frontend Only)
+
+- **React.js**  
+- **React Router DOM v7**  
+- **Tailwind CSS + DaisyUI**  
+- **React Toastify & SweetAlert2**  
+- **React Datepicker**  
+- **React Countdown Circle Timer**  
+- **Firebase Authentication**  
+- **AOS Animation, Typewriter, Lottie**
+
