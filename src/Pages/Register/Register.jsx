@@ -183,6 +183,7 @@ const Register = () => {
                 </span>
                 <input
                   name="password"
+                  type="password"
                   className="w-full pl-10 pr-10 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
                   placeholder="Enter your password"
                   required
