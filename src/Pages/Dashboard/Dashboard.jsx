@@ -6,7 +6,7 @@ const Dashboard = () => {
       document.title = "Marathon Management | Dashboard";
     }, []);
   return (
-    <div className="min-h-screen pt-16 lg:pt-32 overflow-x-hidden">
+    <div className="min-h-screen py-16 lg:pt-32 overflow-x-hidden">
       <div data-aos="fade-up" className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-5">
         {/* left aside */}
         <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 ">
@@ -37,7 +37,7 @@ const Dashboard = () => {
         </div>
 
         {/* Right aside */}
-        <div data-aos="fade-left" className=" w-full lg:w-[70%] px-5  border-0  lg:border-l border-gray-200 dark:border-gray-800 lg:min-h-[80vh]">
+        <div data-aos="fade-left" className=" w-full lg:w-[70%] px-5  border-0  lg:border-l border-gray-200 dark:border-gray-800 h-screen overflow-y-auto">
           <div>
             <Outlet></Outlet>
           </div>

@@ -151,7 +151,7 @@ const Marathons = () => {
       </div>
     </div>
      : 
-      <div className="my-10 flex flex-col items-center justify-center min-h-screen">
+      <div className="pb-10 flex flex-col items-center justify-center min-h-screen">
           <div className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]">
             <Lottie animationData={noData} loop={true} />
           </div>
