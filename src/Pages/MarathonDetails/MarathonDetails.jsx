@@ -54,7 +54,7 @@ const MarathonDetails = () => {
         <table className="w-full text-left border-separate border-spacing-y-2">
           <tbody>
             <tr className="text-sm lg:text-lg">
-              <td className="font-semibold text-gray-700 dark:text-gray-300 text-sm">
+              <td className="font-semibold text-gray-700 dark:text-gray-300">
                 Location
               </td>
               <td className="text-gray-600 dark:text-gray-200">
@@ -109,19 +109,19 @@ const MarathonDetails = () => {
                 : {marathon.registrationsCount}
               </td>
             </tr>
-            <tr className="text-sm lg:text-lg hidden md:block">
-              <td className="font-semibold text-gray-700 dark:text-gray-300">
+            <tr className="text-sm lg:text-lg ">
+              <td className="font-semibold text-gray-700 dark:text-gray-300 hidden lg:table-cell">
                 Organizer Name
               </td>
-              <td className="text-gray-600 dark:text-gray-200">
+              <td className="text-gray-600 dark:text-gray-200 hidden lg:table-cell">
                 : {marathon.organizerName}
               </td>
             </tr>
-            <tr className="text-sm lg:text-lg hidden md:block">
-              <td className="font-semibold text-gray-700 dark:text-gray-300">
+            <tr className="text-sm lg:text-lg">
+              <td className="font-semibold text-gray-700 dark:text-gray-300 hidden lg:table-cell">
                 Organizer Email
               </td>
-              <td className="text-gray-600 dark:text-gray-200">
+              <td className="text-gray-600 dark:text-gray-200 hidden lg:table-cell">
                 : {marathon.organizerEmail}
               </td>
             </tr>

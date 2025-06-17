@@ -10,24 +10,24 @@ const Dashboard = () => {
       <div data-aos="fade-up" className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-5">
         {/* left aside */}
         <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 ">
-          <h2 className="mb-10 text-lg md:text-xl lg:text-2xl  specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gradient-to-r from-gray-200 to-white dark:from-gray-700 dark:to-gray-900 rounded-t-2xl p-4 text-center">
-          All Links
+          <h2 className="mb-10 text-lg md:text-xl lg:text-2xl  specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gradient-to-r from-gray-200 to-white dark:from-gray-700 dark:to-gray-900 rounded-t-2xl py-4 px-7 text-lef">
+          All Links :
         </h2>
-          <div className="flex flex-col space-y-4 mt-10 px-5">
+          <div className="flex flex-col space-y-4 mt-10 px-5 md:text-center lg:text-left">
             <NavLink
-              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg"
+              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg border-b"
               to="/dashboard/addMarathon"
             >
               Add Marathon
             </NavLink>
             <NavLink
-              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg"
+              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg border-b"
               to="/dashboard/myMarathonList"
             >
               My Marathon List
             </NavLink>
             <NavLink
-              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg"
+              className="text-sm lg:text-lg text-gray-800 dark:text-gray-300 font-medium md:text-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg border-b"
               to="/dashboard/myApplyList"
             >
               My Apply List

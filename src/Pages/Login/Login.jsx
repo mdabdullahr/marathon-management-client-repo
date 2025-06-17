@@ -60,9 +60,6 @@ const Login = () => {
     <div className="min-h-screen flex flex-col md:flex-row bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300 overflow-x-hidden">
       {/* Left Panel */}
       <div data-aos="fade-right" className="md:w-1/2 bg-indigo-200 text-white flex flex-col justify-center items-center p-10 text-center relative overflow-hidden">
-        {/* Black overlay */}
-        {/* <div className="absolute inset-0 bg-black opacity-30 z-10"></div> */}
-
         <p className="text-2xl md:text-3xl lg:text-4xl mb-5 font-semibold text-white mt-16 md:mt-0 h-[60px]">
                   <Typewriter
                     words={[

@@ -181,8 +181,8 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
           <p className="text-lg font-medium text-gray-600 dark:text-gray-300 mt-4">
             You have no registrations yet.
           </p>
-          <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">
-            Join a marathon to see your applications here.
+          <p className="text-sm text-gray-400 dark:text-gray-500 mb-4 text-center">
+            Add a marathon to see your marathons here.
           </p>
           <Link to="/dashboard/addMarathon">
             <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">

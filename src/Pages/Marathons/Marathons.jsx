@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import useAllMarathons from "../../Api/useAllMarathons";
+import noData from "../../assets/Annimations/nodata.json"
+import Lottie from "lottie-react";
 
 const Marathons = () => {
   const { allMarathonsPromise } = useAllMarathons();
   const [allMarathons, setAllMarathons] = useState([]);
-  const [sortOrder, setSortOrder] = useState("desc"); // ডিফল্ট নতুন থেকে পুরনো
+  const [sortOrder, setSortOrder] = useState("desc");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     allMarathonsPromise(sortOrder).then((data) => {
       setAllMarathons(data);
+      setLoading(false)
     });
   }, [allMarathonsPromise, sortOrder]);
 
@@ -17,8 +21,17 @@ const Marathons = () => {
     document.title = "Marathon Management | Marathons";
   }, []);
 
+  if(loading){
+    return <div className="flex justify-center items-center min-h-screen">
+  <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent"></div>
+</div>
+  }
+
   return (
-    <div className="min-h-screen py-32">
+    <>
+    {
+      allMarathons.length > 0 ? 
+      <div className="min-h-screen py-32">
       {/* Sorting Dropdown */}
       <div className="mb-10 text-center">
         <select
@@ -137,6 +150,25 @@ const Marathons = () => {
         ))}
       </div>
     </div>
+     : 
+      <div className="my-10 flex flex-col items-center justify-center min-h-screen">
+          <div className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]">
+            <Lottie animationData={noData} loop={true} />
+          </div>
+          <p className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-medium text-gray-600 dark:text-gray-300 mt-4">
+             No Available Marathon Here.
+          </p>
+          <p className="text-sm lg:text-lg 2xl:text-xl text-gray-400 dark:text-gray-500 mb-4 text-center my-4">
+            Add a marathon to see marathons here.
+          </p>
+          <Link to="/dashboard/addMarathon">
+            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+              Add Marathon
+            </button>
+          </Link>
+        </div>
+    }
+    </>
   );
 };
 

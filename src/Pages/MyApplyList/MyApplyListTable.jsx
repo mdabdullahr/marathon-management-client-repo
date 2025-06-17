@@ -163,7 +163,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
           <p className="text-lg font-medium text-gray-600 dark:text-gray-300 mt-4">
             You have no registrations yet.
           </p>
-          <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">
+          <p className="text-sm text-gray-400 dark:text-gray-500 mb-4 text-center">
             Join a marathon to see your applications here.
           </p>
           <Link to="/marathons">

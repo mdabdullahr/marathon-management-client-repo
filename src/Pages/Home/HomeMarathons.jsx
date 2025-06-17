@@ -1,5 +1,7 @@
+import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import noData from "../../assets/Annimations/nodata.json"
 
 const HomeMarathons = () => {
   const [marathons, setMarathons] = useState([]);
@@ -18,12 +20,18 @@ const HomeMarathons = () => {
       });
   }, []);
 
-  if (loading)
-    return <p className="text-center text-gray-500">Loading marathons...</p>;
-
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent"></div>
+      </div>
+    );
+  }
   return (
     <section className="pb-0 lg:pb-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 max-w-[1300px] mx-auto">
+      {
+        marathons.length > 0 ?
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 max-w-[1300px] mx-auto">
         {marathons.map((marathon) => (
           <div
             key={marathon._id}
@@ -109,7 +117,26 @@ const HomeMarathons = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> 
+      :
+      <div className="my-10 flex flex-col items-center justify-center">
+          <div className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]">
+            <Lottie animationData={noData} loop={true} />
+          </div>
+          <p className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-medium text-gray-600 dark:text-gray-300 mt-4">
+             No Available Marathon Here.
+          </p>
+          <p className="text-sm lg:text-lg 2xl:text-xl text-gray-400 dark:text-gray-500 mb-4 text-center my-4">
+            Add a marathon to see marathons here.
+          </p>
+          <Link to="/dashboard/addMarathon">
+            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+              Add Marathon
+            </button>
+          </Link>
+        </div>
+      }
+     
     </section>
   );
 };
