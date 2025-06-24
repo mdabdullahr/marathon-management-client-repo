@@ -6,13 +6,18 @@ Marathon Management System is a feature-rich event-based web application where u
 
 ---
 
-## ✨ Key Features
+⚡ Key Features
+- Real-time Seat Update upon registration
 
-- 🔐 **Authentication & Authorization:** Secure login system with email/password and Google sign-in along with protected private routes.
-- 🏁 **Dynamic Marathon Creation:** Logged-in users can create new marathon events with all essential information saved in the database.
-- 📅 **Live Countdown Timer:** Real-time countdown showing days, hours, and minutes left before each marathon starts.
-- 🔍 **Search & Sort Features:** Users can search for their registered marathons and sort events based on creation date (newest to oldest or vice versa).
-- 📋 **User-Specific Dashboards:** Each user has a personalized dashboard to manage their created and registered marathons.
+- Dynamic Dashboard based on user roles
+
+- Visual Countdown Timer
+
+- Event Cards with Date, Fee, and Capacity
+
+- Toasts for Success & Error Messages
+
+- Smooth Animations using AOS
 
 ---
 
