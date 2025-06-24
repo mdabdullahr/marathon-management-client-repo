@@ -67,4 +67,6 @@ Marathon Management System is a feature-rich event-based web application where u
 
 
 ### 🛠️ How to Run Locally
-###### 1. Clone the repository:
+####1. Clone the repository:
+//git clone https://github.com/mdabdullahr/marathon-management-client-repo.git
+
