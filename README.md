@@ -64,3 +64,6 @@ Marathon Management System is a feature-rich event-based web application where u
 - globals: ^16.0.0
 
 - vite: ^6.3.1
+
+
+### 🛠️ How to Run Locally
