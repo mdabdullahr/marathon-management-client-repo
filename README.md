@@ -1,6 +1,6 @@
 # 🏃 Marathon Management System
 
-**Live Site URL:** [https://marathons-management.web.app/](https://marathons-management.web.app/)
+**🔗 Live Site URL:** [https://marathons-management.web.app/](https://marathons-management.web.app/)
 
 Marathon Management System is a feature-rich event-based web application where users can create, explore, and register for marathon events. The platform offers a responsive design, user-friendly interface, and real-time interactive features to ensure a seamless user experience.
 
@@ -8,18 +8,18 @@ Marathon Management System is a feature-rich event-based web application where u
 
 ## ⚡ Key Features
 
-- Real-time Seat Update upon registration  
-- Dynamic Dashboard based on user roles  
-- Visual Countdown Timer  
-- Event Cards with Date, Fee, and Capacity  
-- Toasts for Success & Error Messages  
-- Smooth Animations using AOS  
+- ✅ Real-time Seat Update upon registration  
+- ✅ Dynamic Dashboard based on user roles  
+- ✅ Visual Countdown Timer  
+- ✅ Event Cards with Date, Fee, and Capacity  
+- ✅ Toasts for Success & Error Messages  
+- ✅ Smooth Animations using AOS  
 
 ---
 
 ## 📦 NPM Packages Used
 
-### Dependencies
+### ✅ Dependencies
 
 - `@tailwindcss/vite`: ^4.1.5  
 - `aos`: ^2.3.4  
@@ -32,7 +32,7 @@ Marathon Management System is a feature-rich event-based web application where u
 - `swiper`: ^11.2.6  
 - `tailwindcss`: ^4.1.5  
 
-### DevDependencies
+### 🛠️ DevDependencies
 
 - `@eslint/js`: ^9.22.0  
 - `@types/react`: ^19.0.10  
@@ -47,7 +47,7 @@ Marathon Management System is a feature-rich event-based web application where u
 
 ---
 
-### 🛠️ How to Run Locally
+## 🛠️ How to Run Locally
 
 #### 1. Clone the repository:
 ```bash
@@ -82,17 +82,10 @@ arduino
 Copy
 Edit
 http://localhost:5173
-👨‍💻 Author:
+👨‍💻 Author
 Abdullah
 GitHub: @mdabdullahr
 Email: mdabdullah162005@gmail.com
 
 📜 License
 This project is licensed under the MIT License.
-
-
-
-
-
-
-
