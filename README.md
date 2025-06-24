@@ -70,9 +70,7 @@ Marathon Management System is a feature-rich event-based web application where u
 #### 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/project-name.git
-cd project-name
-npm install
-npm run dev
+
 
 
 
