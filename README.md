@@ -6,7 +6,7 @@ Marathon Management System is a feature-rich event-based web application where u
 
 ---
 
-##⚡ Key Features
+## ⚡ Key Features
 - Real-time Seat Update upon registration
 
 - Dynamic Dashboard based on user roles
@@ -43,7 +43,8 @@ Marathon Management System is a feature-rich event-based web application where u
 
 -tailwindcss: ^4.1.5
 
--DevDependencies
+### DevDependencies
+
 -@eslint/js: ^9.22.0
 
 -@types/react: ^19.0.10
