@@ -50,41 +50,37 @@ Marathon Management System is a feature-rich event-based web application where u
 ## 🛠️ How to Run Locally
 
 #### 1. Clone the repository:
-```bash
+bash <br/>
 git clone https://github.com/mdabdullahr/marathon-management-client-repo.git
+
 2. Navigate to the project directory:
-bash
-Copy
-Edit
+bash <br/>
 cd marathon-management-client-repo
+
 3. Install dependencies:
-bash
-Copy
-Edit
+bash <br/>
 npm install
+
 4. Create a .env file and add your Firebase config:
-env
-Copy
-Edit
-VITE_API_KEY=your_api_key
-VITE_AUTH_DOMAIN=your_auth_domain
-VITE_PROJECT_ID=your_project_id
-VITE_STORAGE_BUCKET=your_storage_bucket
-VITE_MESSAGING_SENDER_ID=your_sender_id
-VITE_APP_ID=your_app_id
+env <br/>
+
+VITE_API_KEY=your_api_key <br/>
+VITE_AUTH_DOMAIN=your_auth_domain <br/>
+VITE_PROJECT_ID=your_project_id <br/>
+VITE_STORAGE_BUCKET=your_storage_bucket <br/>
+VITE_MESSAGING_SENDER_ID=your_sender_id <br/>
+VITE_APP_ID=your_app_id 
+
 5. Run the development server:
-bash
-Copy
-Edit
+bash <br/>
 npm run dev
+
 6. Visit in browser:
-arduino
-Copy
-Edit
 http://localhost:5173
+
 👨‍💻 Author
-Abdullah
-GitHub: @mdabdullahr
+Abdullah <br/>
+GitHub: @mdabdullahr <br/>
 Email: mdabdullah162005@gmail.com
 
 📜 License
