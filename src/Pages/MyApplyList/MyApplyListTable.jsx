@@ -17,9 +17,9 @@ const MyApplyListRow = ({ myApplyPromise }) => {
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(()=>{
-    setRegistrations(data)
-  },[data])
+  useEffect(() => {
+    setRegistrations(data);
+  }, [data]);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -80,80 +80,93 @@ const MyApplyListRow = ({ myApplyPromise }) => {
       });
   };
 
-
   return (
     <>
       {registrations.length > 0 ? (
-        <div className="overflow-x-auto my-10">
-          <table className="table">
-            {/* head */}
-            <thead className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
-              <tr>
-                <th>#</th>
-                <th>Marathon Image, Title & location</th>
-                <th>Your Name & Contact</th>
-                <th>Marathon Start Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-800 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
-              {registrations.map((registration, index) => (
-                <tr
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
-                  key={registration._id}
-                >
-                  <th>
-                    <label>{index + 1}</label>
-                  </th>
-                  <td>
-                    <div className="flex items-center gap-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle h-12 w-12">
-                          <img src={registration.image} alt="Avatar" />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-bold">
-                          {registration.marathonTitle}
-                        </div>
-                        <div className="text-sm opacity-50">
-                          {registration.location}
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    {registration.firstName} {registration.lastName}
-                    <br />
-                    <span>{registration.contactNumber}</span>
-                  </td>
-                  <td>{registration.startDate}</td>
-                  <th className="flex gap-4">
-                    <Link to={`/marathon/${registration.id}`}>
-                      <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]">
-                        <BsFillInfoCircleFill size={20} color=" #17a2b8" />
-                      </button>
-                    </Link>
-                    <button
-                      onClick={() => {
-                        setSelectedRegistration(registration);
-                        setIsModalOpen(true);
-                      }}
-                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-                    >
-                      <FaPen size={20} color="#b182e3" />
-                    </button>
-                    <button
-                      onClick={() => handleDelete(registration._id)}
-                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-                    >
-                      <MdDelete size={20} color="#FF0000" />
-                    </button>
-                  </th>
+        <div className="my-10 p-6 rounded-lg bg-white dark:bg-gray-800">
+          {/* Title */}
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600 pb-2">
+            My Apply List
+          </h2>
+
+          <div className="overflow-x-auto">
+            <table className="table w-full">
+              {/* head */}
+              <thead className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
+                <tr>
+                  <th>#</th>
+                  <th>Marathon Image, Title & Location</th>
+                  <th>Your Name & Contact</th>
+                  <th>Marathon Start Date</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody className="divide-y divide-gray-300 dark:divide-gray-700 text-gray-800 dark:text-gray-200">
+                {registrations.map((registration, index) => (
+                  <tr
+                    key={registration._id}
+                    className="hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer transition"
+                  >
+                    <th>{index + 1}</th>
+
+                    <td>
+                      <div className="flex items-center gap-3">
+                        <div className="avatar">
+                          <div className="mask mask-squircle h-12 w-12">
+                            <img src={registration.image} alt="Avatar" />
+                          </div>
+                        </div>
+                        <div>
+                          <div className="font-bold">
+                            {registration.marathonTitle}
+                          </div>
+                          <div className="text-sm opacity-70">
+                            {registration.location}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      {registration.firstName} {registration.lastName}
+                      <br />
+                      <span className="opacity-70">
+                        {registration.contactNumber}
+                      </span>
+                    </td>
+
+                    <td>{registration.startDate}</td>
+
+                    <th className="flex gap-4">
+                      <Link to={`/marathon/${registration.id}`}>
+                        <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 dark:shadow-gray-700 p-2">
+                          <BsFillInfoCircleFill size={20} color="#17a2b8" />
+                        </button>
+                      </Link>
+
+                      <button
+                        onClick={() => {
+                          setSelectedRegistration(registration);
+                          setIsModalOpen(true);
+                        }}
+                        className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 dark:shadow-gray-700 p-2"
+                      >
+                        <FaPen size={20} color="#b182e3" />
+                      </button>
+
+                      <button
+                        onClick={() => handleDelete(registration._id)}
+                        className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 dark:shadow-gray-700 p-2"
+                      >
+                        <MdDelete size={20} color="#FF0000" />
+                      </button>
+                    </th>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       ) : (
         <div className="my-10 flex flex-col items-center justify-center min-h-[300px]">

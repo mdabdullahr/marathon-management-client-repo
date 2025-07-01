@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router";
 import WelcomeDashboard from "../components/WelcomeDashboard.jsx";
 import RootLayouts from "../Layouts/RootLayouts";
 import AddMarathon from "../Pages/AddMarathon/AddMarathon.jsx";
-import Dashboard from "../Pages/Dashboard/Dashboard.jsx";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -15,6 +14,9 @@ import Register from "../Pages/Register/Register";
 import Registration from "../Pages/Registration/Registration.jsx";
 import TermsAndCondition from "../Pages/TermsAndCondition/TermsAndCondition.jsx";
 import PrivateRoutes from "../Provider/PrivateRoutes.jsx";
+import DashboardLayout from "../Layouts/DashboardLayout.jsx";
+import UpdateProfile from "../Pages/Dashboard/UpdateProfile/UpdateProfile.jsx";
+import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -51,10 +53,28 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/register",
+        Component: Register,
+      },
+      {
+        path: "/terms-and-conditions",
+        Component: TermsAndCondition,
+      },
+      {
+        path: "/privacy-policy",
+        Component: PrivacyPolicy,
+      },
+    ],
+  },
+   {
         path: "/dashboard",
         element: (
           <PrivateRoutes>
-            <Dashboard></Dashboard>
+            <DashboardLayout></DashboardLayout>
           </PrivateRoutes>
         ),
         children: [
@@ -86,24 +106,14 @@ export const router = createBrowserRouter([
               </PrivateRoutes>
             ),
           },
+          {
+        path: "updateProfile",
+        Component: UpdateProfile,
+      },
+          {
+        path: "myProfile",
+        Component: MyProfile,
+      },
         ],
       },
-      {
-        path: "/login",
-        Component: Login,
-      },
-      {
-        path: "/register",
-        Component: Register,
-      },
-      {
-        path: "/terms-and-conditions",
-        Component: TermsAndCondition,
-      },
-      {
-        path: "/privacy-policy",
-        Component: PrivacyPolicy,
-      },
-    ],
-  },
 ]);

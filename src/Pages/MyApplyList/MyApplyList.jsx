@@ -16,10 +16,6 @@ const MyApplyList = () => {
 
   return (
     <div data-aos="fade-left">
-      <h2 className="text-center text-lg md:text-xl lg:text-2xl specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gray-200 dark:bg-gray-700 p-4 rounded-t-2xl">
-        My Apply List
-      </h2>
-
       <div className="flex justify-center mt-5 mb-6">
         <input
           type="text"

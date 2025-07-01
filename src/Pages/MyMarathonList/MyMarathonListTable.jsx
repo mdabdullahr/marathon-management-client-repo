@@ -13,7 +13,7 @@ const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
 const MyMarathonListTable = ({ myMarathonPromise }) => {
   const data = use(myMarathonPromise);
-  const {updateMyMarathonPromise, deleteMyMarathonPromise} = useMyMarathon();
+  const { updateMyMarathonPromise, deleteMyMarathonPromise } = useMyMarathon();
   const [marathons, setMarathons] = useState(data);
   const [selectedMarathon, setSelectedMarathon] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,17 +26,17 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
   const startDateRef = useRef(null);
 
   useEffect(() => {
-  if (isModalOpen && selectedMarathon) {
-    if (selectedMarathon.startRegistrationDate)
-      setStartRegDate(new Date(selectedMarathon.startRegistrationDate));
+    if (isModalOpen && selectedMarathon) {
+      if (selectedMarathon.startRegistrationDate)
+        setStartRegDate(new Date(selectedMarathon.startRegistrationDate));
 
-    if (selectedMarathon.endRegistrationDate)
-      setEndRegDate(new Date(selectedMarathon.endRegistrationDate));
+      if (selectedMarathon.endRegistrationDate)
+        setEndRegDate(new Date(selectedMarathon.endRegistrationDate));
 
-    if (selectedMarathon.marathonStartDate)
-      setMarathonDate(new Date(selectedMarathon.marathonStartDate));
-  }
-}, [isModalOpen, selectedMarathon]);
+      if (selectedMarathon.marathonStartDate)
+        setMarathonDate(new Date(selectedMarathon.marathonStartDate));
+    }
+  }, [isModalOpen, selectedMarathon]);
 
   const formatDate = (date) => {
     return date.toISOString().split("T")[0];
@@ -55,9 +55,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
       if (result.isConfirmed) {
         deleteMyMarathonPromise(id).then((res) => {
           if (res.data?.deletedCount) {
-            setMarathons((prev) =>
-                prev.filter((item) => item._id !== id)
-              );
+            setMarathons((prev) => prev.filter((item) => item._id !== id));
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
@@ -74,8 +72,8 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
     const form = e.target;
     const formData = new FormData(form);
     const updatedData = Object.fromEntries(formData.entries());
-    
-      updateMyMarathonPromise(selectedMarathon._id, updatedData)
+
+    updateMyMarathonPromise(selectedMarathon._id, updatedData)
       .then((res) => {
         if (res.data?.modifiedCount > 0) {
           setMarathons((prev) =>
@@ -86,11 +84,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
             )
           );
           setIsModalOpen(false);
-          Swal.fire(
-            "Updated!",
-            "Marathon updated successfully.",
-            "success"
-          );
+          Swal.fire("Updated!", "Marathon updated successfully.", "success");
         }
       })
       .catch((err) => {
@@ -102,76 +96,80 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
   return (
     <>
       {marathons.length > 0 ? (
-        <div className="overflow-x-auto my-10">
-          <table className="table">
-            {/* head */}
-            <thead className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
-              <tr>
-                <th>#</th>
-                <th>Marathon Image, Title & Location</th>
-                <th>Distance</th>
-                <th className="hidden lg:block">Registration</th>
-                <th>Start Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-800 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
-              {marathons.map((marathon, index) => (
-                <tr
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
-                  key={marathon._id}
-                >
-                  <th>
-                    <label>{index + 1}</label>
-                  </th>
-                  <td>
-                    <div className="flex items-center gap-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle h-12 w-12">
-                          <img src={marathon.marathonImage} alt="Avatar" />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-bold">
-                          {marathon.marathonTitle}
-                        </div>
-                        <div className="text-sm opacity-50">
-                          {marathon.location}
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    {marathon.runningDistance} {marathon.lastName}
-                  </td>
-                  <td className="hidden lg:block">{marathon.registrationsCount}</td>
-                  <td>{marathon.marathonStartDate}</td>
-                  <th className="flex gap-4">
-                    <Link to={`/marathon/${marathon._id}`}>
-                      <button className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]">
-                        <BsFillInfoCircleFill size={20} color=" #17a2b8" />
-                      </button>
-                    </Link>
-                    <button
-                      onClick={() => {
-                        setSelectedMarathon(marathon);
-                        setIsModalOpen(true);
-                      }}
-                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-                    >
-                      <FaPen size={20} color="#b182e3" />
-                    </button>
-                    <button
-                      onClick={() => handleDelete(marathon._id)}
-                      className="cursor-pointer rounded bg-transparent shadow shadow-gray-300 p-[10px]"
-                    >
-                      <MdDelete size={20} color="#FF0000" />
-                    </button>
-                  </th>
+        <div className=" p-6 rounded-lg bg-white dark:bg-gray-800">
+          {/* Title */}
+          <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600 pb-2">
+            Marathon List
+          </h2>
+
+          <div className="overflow-x-auto">
+            <table className="table w-full">
+              <thead className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
+                <tr>
+                  <th>#</th>
+                  <th>Marathon Image, Title & Location</th>
+                  <th>Distance</th>
+                  <th className="hidden lg:block">Registration</th>
+                  <th>Start Date</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-gray-300 dark:divide-gray-600 text-gray-800 dark:text-gray-200">
+                {marathons.map((marathon, index) => (
+                  <tr
+                    key={marathon._id}
+                    className="hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                  >
+                    <th className="px-4 py-3">{index + 1}</th>
+                    <td className="px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <div className="avatar">
+                          <div className="mask mask-squircle h-12 w-12">
+                            <img src={marathon.marathonImage} alt="Avatar" />
+                          </div>
+                        </div>
+                        <div>
+                          <div className="font-bold">
+                            {marathon.marathonTitle}
+                          </div>
+                          <div className="text-sm opacity-50">
+                            {marathon.location}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">{marathon.runningDistance}</td>
+                    <td className="hidden lg:block px-4 py-3">
+                      {marathon.registrationsCount}
+                    </td>
+                    <td className="px-4 py-3">{marathon.marathonStartDate}</td>
+                    <td className="px-4 py-3 flex gap-4">
+                      <Link to={`/marathon/${marathon._id}`}>
+                        <button className="cursor-pointer rounded bg-transparent p-2 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+                          <BsFillInfoCircleFill size={20} color="#17a2b8" />
+                        </button>
+                      </Link>
+                      <button
+                        onClick={() => {
+                          setSelectedMarathon(marathon);
+                          setIsModalOpen(true);
+                        }}
+                        className="cursor-pointer rounded bg-transparent p-2 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                      >
+                        <FaPen size={20} color="#b182e3" />
+                      </button>
+                      <button
+                        onClick={() => handleDelete(marathon._id)}
+                        className="cursor-pointer rounded bg-transparent p-2 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                      >
+                        <MdDelete size={20} color="#FF0000" />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       ) : (
         <div className="my-10 flex flex-col items-center justify-center min-h-[300px]">
