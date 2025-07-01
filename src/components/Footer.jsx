@@ -39,7 +39,7 @@ const Footer = () => {
     >
       <div
         data-aos="fade-up"
-        className="w-11/12 lg:w-8/12 mx-auto pt-10 md:pt-20 pb-6 md:pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20 xl:gap-32 2xl:gap-42 items-start"
+        className="w-11/12 lg:w-8/12 mx-auto pt-10 md:pt-20 pb-6 md:pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20 xl:gap-32 2xl:gap-42 items-start mt-20"
       >
         {/* 1. Left Section */}
         <div>
@@ -54,14 +54,12 @@ const Footer = () => {
             </h4>
           </div>
           <p
-            className={`text-sm md:text-lg mt-4 mb-6 ${
+            className={`text-sm md:text-lg mt-2 mb-6 ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
             Marathon Management System is a full-featured platform for
-            organizing, managing, and registering for marathon events. It
-            supports role-based access, real-time updates, and a smooth
-            experience for admins, organizers, and participants.
+            organizing, managing, and registering for marathon events.
           </p>
         </div>
 
@@ -74,60 +72,12 @@ const Footer = () => {
           >
             Useful Links
           </h3>
-          {/* {[
-            ["Terms & Conditions", "/terms-and-conditions"],
-            ["Privacy Policy", "/privacy-policy"],
-            ["Home", "/"],
-            ["Marathons", "/marathons"],
-            ["Dashboard", "/dashboard"],
-          ].map(([label, link], i) => (
-            <p
-              key={i}
-              className={`text-sm md:text-base ${
-                isDark ? "text-gray-400" : "text-gray-600"
-              }`}
-            >
-              <NavLink to={link}>{label}</NavLink>
-            </p>
-          ))} */}
-
           <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
           <NavLink to="/privacy-policy">Privacy Policy</NavLink>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/marathons">Marathons</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
-          <a
-            href="https://www.marathonfund.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-base hover:underline"
-          >
-            Related Blogs-1
-          </a>
-          <a
-            href="https://www.marathonmanagement.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-base hover:underline"
-          >
-            Related Blogs-2
-          </a>
-          <a
-            href="https://www.polar.com/blog/tag/marathon/?srsltid=AfmBOor6V4MuazAM-4S7eVHujTruy0PR93YA5URHrw_LB0Jsc5dzIoK-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-base  hover:underline"
-          >
-            Related Blogs-3
-          </a>
-          <a
-            href="https://trainwithmarc.com/marathon-blog-posts/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-base hover:underline"
-          >
-            Related Blogs-4
-          </a>
+          
           
         </div>
 
@@ -138,52 +88,9 @@ const Footer = () => {
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
-            Get in Touch
+            Connect With Us
           </h3>
-          <div
-            className={`space-y-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <MdPhone className="text-xl" />
-              <span className="text-sm md:text-base">+880 1927-785731</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdPhone className="text-xl" />
-              <span className="text-sm md:text-base">+880 1768262031</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdEmail className="text-xl" />
-              <span className="text-sm md:text-base">marathons@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdEmail className="text-xl" />
-              <span className="text-sm md:text-base">mdabdullah@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdLocationOn className="text-xl" />
-              <span className="text-sm md:text-base">Dhaka, Bangladesh</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdLocationOn className="text-xl" />
-              <span className="text-sm md:text-base">Shyamnagar, Satkhira</span>
-            </div>
-          </div>
-        </div>
-
-        {/* 4. Follow Us Section */}
-        <div className="mt-0 lg:mt-5">
-          <h3
-            className={`text-lg md:text-xl font-semibold mb-4 ${
-              isDark ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            Follow Us
-          </h3>
-
-          {/* Social Icons */}
-          <div className="flex items-center gap-4 flex-wrap mb-6">
+           <div className="flex items-center gap-4 flex-wrap mb-6">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -223,7 +130,28 @@ const Footer = () => {
               <FaLinkedinIn size={20} />
             </a>
           </div>
+          <div
+            className={`space-y-4 ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            <div className="flex items-center gap-3">
+              <MdPhone className="text-xl" />
+              <span className="text-sm md:text-base">+880 1927-785731</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdEmail className="text-xl" />
+              <span className="text-sm md:text-base">marathons@gmail.com</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdLocationOn className="text-xl" />
+              <span className="text-sm md:text-base">Dhaka, Bangladesh</span>
+            </div>
+          </div>
+        </div>
 
+        {/* 4. Follow Us Section */}
+        <div className="mt-0 lg:mt-5">
           {/* Email and Message Form */}
           <form
             onSubmit={(e) => {
@@ -239,14 +167,6 @@ const Footer = () => {
           >
             {/* Email Field */}
             <div>
-              <label
-                htmlFor="email"
-                className={`block mb-1 text-sm font-medium ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Your Email
-              </label>
               <input
                 type="email"
                 id="email"
@@ -262,14 +182,6 @@ const Footer = () => {
 
             {/* Message Field */}
             <div>
-              <label
-                htmlFor="message"
-                className={`block mb-1 text-sm font-medium ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Your Message
-              </label>
               <textarea
                 id="message"
                 rows="3"
@@ -286,7 +198,7 @@ const Footer = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full mt-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
+              className="w-full px-5 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
             >
               Submit
             </button>

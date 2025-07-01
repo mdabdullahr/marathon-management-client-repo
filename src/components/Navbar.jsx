@@ -13,20 +13,20 @@ const Navbar = () => {
   const links = (
     <>
       <li
-        className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
+        className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/">Home</NavLink>
       </li>
       <li
-        className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
+        className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/marathons">Marathons</NavLink>
       </li>
       {user && (
         <li
-          className="text-lg text-gray-800 dark:text-gray-200 font-medium lg:text-xl
+          className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
         >
           <NavLink to="/dashboard">Dashboard</NavLink>
@@ -49,11 +49,15 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-transparent bg-opacity-50 backdrop-blur-md">
-      <div className="navbar w-full md:w-11/12 mx-auto px-2 md:px-0 py-3">
+    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-purple-600 to-indigo-600">
+      <div className="navbar max-w-[1320px] mx-auto px-4  py-2">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="lg:hidden text-black dark:text-white">
+            <div
+              tabIndex={0}
+              role="button"
+              className="lg:hidden text-black dark:text-white"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7"
@@ -77,19 +81,17 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover ml-2"
+            className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover sm:ml-2 lg:ml-0"
             src={navLogo}
             alt="Nav Logo"
           />
-          <h3
-            className="text-xl md:text-2xl specific-text lg:text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent hidden md:block"
-          >
+          <h3 className="text-xl md:text-2xl specific-text lg:text-3xl font-bold text-white hidden md:block">
             Marathon's
           </h3>
         </div>
 
         <div className="navbar-end hidden lg:flex gap-4">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="flex items-center gap-6">{links}</ul>
           <DarkMoodToggoler></DarkMoodToggoler>
           {user && (
             <div className="relative group">
@@ -107,7 +109,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
             >
               Logout
             </button>
@@ -116,7 +118,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
                 >
                   Login
                 </button>{" "}
@@ -124,7 +126,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
                 >
                   Register
                 </button>
@@ -150,7 +152,7 @@ const Navbar = () => {
             <button
               onClick={handleLogOut}
               data-aos="zoom-in"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+              className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Logout
             </button>
@@ -159,7 +161,7 @@ const Navbar = () => {
               <Link to="/login">
                 <button
                   data-aos="zoom-in"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
+                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
                 >
                   Login
                 </button>{" "}
@@ -167,7 +169,7 @@ const Navbar = () => {
               <Link to="/register">
                 <button
                   data-aos="zoom-in"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold specific-text text-sm md:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
+                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
                 >
                   Register
                 </button>

@@ -31,7 +31,7 @@ a.active {
   }
 
   .card-wrapper {
-    @apply relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden;
+    @apply relative bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden;
   }
 
   .card-wrapper::before {

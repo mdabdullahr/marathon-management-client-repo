@@ -7,9 +7,9 @@ const Dashboard = () => {
     }, []);
   return (
     <div className="min-h-screen py-16 lg:pt-32 overflow-x-hidden">
-      <div data-aos="fade-up" className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-5">
+      <div data-aos="fade-up" className="max-w-[1320px] mx-auto flex flex-col lg:flex-row gap-5">
         {/* left aside */}
-        <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 ">
+        <div data-aos="fade-right" className=" w-full lg:w-[30%] text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800">
           <h2 className="mb-10 text-lg md:text-xl lg:text-2xl  specific-text font-semibold text-gray-600 dark:text-purple-200 bg-gradient-to-r from-gray-200 to-white dark:from-gray-700 dark:to-gray-900 rounded-t-2xl py-4 px-7 text-lef">
           All Links :
         </h2>

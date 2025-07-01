@@ -103,7 +103,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
     <>
       {marathons.length > 0 ? (
         <div className="overflow-x-auto my-10">
-          <table className="table dark:table-zebra border border-gray-100 dark:border-gray-800">
+          <table className="table">
             {/* head */}
             <thead className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600">
               <tr>

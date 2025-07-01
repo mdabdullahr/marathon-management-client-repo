@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
   return (
     <div data-aos="zoom-in" className="py-24 bg-white dark:bg-gray-900 px-5 lg:px-0">
       <div
-        className="max-w-4xl mx-auto text-gray-300 p-6 space-y-4 mt-10 lg:mt-20 shadow-xl rounded-2xl transition-transform duration-500 hover:scale-105"
+        className="max-w-[1320px] mx-auto text-gray-300 p-6 space-y-4 mt-10 lg:mt-20 min-h-screen"
       >
         <h3
           className="text-2xl md:text-3xl specific-text font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent"

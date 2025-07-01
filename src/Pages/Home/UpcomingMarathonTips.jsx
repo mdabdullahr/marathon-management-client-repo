@@ -14,16 +14,16 @@ const UpcomingMarathonTips = () => {
   ];
 
   return (
-    <section className="py-0 lg:py-12 mt-20">
-      <div className="max-w-[1300px] mx-auto px-4">
+    <section>
+      <div className="max-w-[1320px] mx-auto px-4">
         <h2
-          className="text-xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-600 dark:text-purple-200 specific-text px-2"
+          className="text-xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-600 dark:text-purple-200 specific-text px-2"
           data-aos="fade-up"
         >
           Upcoming Marathon Tips
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 mt-10 lg:mt-24">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
           <div
             className="flex-1"
             data-aos="fade-up"

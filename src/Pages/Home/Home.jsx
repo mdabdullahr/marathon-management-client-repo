@@ -10,12 +10,9 @@ const Home = () => {
     document.title = "Marathon Management | Home";
   }, []);
   return (
-    <div className="transition-colors duration-500 overflow-x-hidden">
+    <div className="transition-colors duration-500 overflow-hidden">
       <Slider></Slider>
-      <section
-        data-aos="zoom-in"
-        className="mt-10 lg:mt-20"
-      >
+      <section className="mt-20">
         <h2 className="text-xl dark:text-purple-200 text-gray-600 md:text-3xl lg:text-4xl specific-text text-center font-bold px-2">
           Marathon's
         </h2>
@@ -26,21 +23,21 @@ const Home = () => {
           registration windows are limited, so be sure to secure your spot
           early.
         </p>
-        <div className="mt-16 pb-10">
+        <div className="mt-10">
           <HomeMarathons></HomeMarathons>
         </div>
       </section>
-      <section>
+      <section className="mt-20">
         <UpcomingMarathons></UpcomingMarathons>
       </section>
 
       {/* extra section 1 */}
-      <section>
+      <section className="mt-20">
         <UpcomingMarathonTips></UpcomingMarathonTips>
       </section>
 
       {/* extra section 2 */}
-      <section>
+      <section className="mt-20">
         <WhyJoinMarathon></WhyJoinMarathon>
       </section>
     </div>

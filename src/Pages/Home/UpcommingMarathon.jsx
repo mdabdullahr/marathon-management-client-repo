@@ -61,6 +61,24 @@ const marathonEvents = [
     image:
       "https://i.ibb.co/7Jf1ND5q/marathon2.jpg",
   },
+  {
+    id: 7,
+    name: "Mymensingh Heritage Run",
+    date: "2025-07-30",
+    location: "Town Hall Ground, Mymensingh",
+    description:
+      "Explore Mymensingh’s rich cultural heritage in this historic marathon that passes through iconic landmarks and scenic routes.",
+    image: "https://i.ibb.co/sj1xkqg/mymarathon.jpg",
+  },
+  {
+    id: 8,
+    name: "Barisal Backwater Sprint",
+    date: "2025-08-22",
+    location: "Kirtonkhola Riverbank, Barisal",
+    description:
+      "Sprint through the calm and picturesque landscapes of Barisal’s backwaters, perfect for runners seeking tranquility with a competitive edge.",
+    image: "https://i.ibb.co/wRwRgXG/barisalmarathon.jpg",
+  },
 ];
 
 const getRandomItems = (arr, n) => {
@@ -69,22 +87,22 @@ const getRandomItems = (arr, n) => {
 };
 
 const UpcomingMarathons = () => {
-  const randomEvents = useMemo(() => getRandomItems(marathonEvents, 6), []);
+  const randomEvents = useMemo(() => getRandomItems(marathonEvents, 8), []);
 
   return (
-    <section className="py-0 lg:py-12">
+    <section>
       <h2
         data-aos="fade-up"
-        className="text-xl md:text-3xl lg:text-4xl font-extrabold text-center mb-10 lg:mb-20 text-gray-700 dark:text-purple-200 px-2"
+        className="text-xl md:text-3xl lg:text-4xl font-extrabold text-center mb-10 text-gray-700 dark:text-purple-200 px-2"
       >
         Upcoming Marathons
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 px-4 max-w-[1300px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-4 max-w-[1320px] mx-auto">
         {randomEvents.map((event) => (
           <div data-aos="fade-up" className="card-wrapper">
           <div
             key={event.id}
-            className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform card-content lg:h-[340px]"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow overflow-hidden hover:shadow-2xl transition-shadow duration-300 transform card-content lg:h-[340px]"
           >
             <img
               src={event.image}
@@ -107,7 +125,7 @@ const UpcomingMarathons = () => {
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                 📍 <strong>Location:</strong> {event.location}
               </p>
-              <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed line-clamp-2">
                 {event.description}
               </p>
             </div>

@@ -31,7 +31,7 @@ const MarathonDetails = () => {
   return (
     <div
       data-aos="fade-up"
-      className="py-32 px-5 w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-8 overflow-x-hidden"
+      className="py-32 px-5 w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-8 overflow-x-hidden"
     >
       <div className="flex-1">
         <img
