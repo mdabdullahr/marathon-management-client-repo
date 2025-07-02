@@ -37,7 +37,7 @@ const DashboardLayout = () => {
           {/* Drawer Content */}
           <div className="drawer-content flex flex-col">
             {/* Mobile Navbar */}
-            <div className="navbar bg-gradient-to-r from-purple-600 to-indigo-600 w-full lg:hidden fixed top-0 left-0 w-full z-50">
+            <div className="navbar bg-gradient-to-r from-purple-600 to-indigo-600 w-full lg:hidden fixed top-0 left-0 z-50">
               <div className="flex-none">
                 <label
                   htmlFor="my-drawer-2"
@@ -76,7 +76,7 @@ const DashboardLayout = () => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <div className="bg-white dark:bg-gray-800 text-base-content w-[70vw] sm:w-72 md:w-80 xl:w-96 p-6 flex flex-col justify-between min-h-screen">
+            <div className="bg-white dark:bg-gray-800 text-base-content w-[70vw] sm:w-72 md:w-80 xl:w-96 p-6 flex flex-col justify-between min-h-screen pt-20 lg:pt-0">
               {/* Top: Logo + Links */}
               <div className="space-y-6">
                 <Link to="/">
