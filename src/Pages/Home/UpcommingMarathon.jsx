@@ -68,7 +68,7 @@ const marathonEvents = [
     location: "Town Hall Ground, Mymensingh",
     description:
       "Explore Mymensingh’s rich cultural heritage in this historic marathon that passes through iconic landmarks and scenic routes.",
-    image: "https://i.ibb.co/sj1xkqg/mymarathon.jpg",
+    image: "https://i.ibb.co/XxrnrS6X/c051wrmwc176nq5srv3klrc333sb.webp",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const marathonEvents = [
     location: "Kirtonkhola Riverbank, Barisal",
     description:
       "Sprint through the calm and picturesque landscapes of Barisal’s backwaters, perfect for runners seeking tranquility with a competitive edge.",
-    image: "https://i.ibb.co/wRwRgXG/barisalmarathon.jpg",
+    image: "https://i.ibb.co/fVM2bDj0/Ackera-Nugent-Jamaica-Trials-2025-1.webp",
   },
 ];
 

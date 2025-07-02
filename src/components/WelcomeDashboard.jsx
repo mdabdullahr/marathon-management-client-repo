@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const WelcomeDashboard = () => {
   return (
-    <div className="my-10 flex flex-col items-center justify-center min-h-[300px]">
+    <div className="my-10 flex flex-col items-center justify-center min-h-screen lg:min-h-[300px]">
       <h3 className="text-lg md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-600 dark:text-purple-200 font-bold mt-10 text-center">
         <Typewriter
           words={["Welcome to your personalized dashboard."]}

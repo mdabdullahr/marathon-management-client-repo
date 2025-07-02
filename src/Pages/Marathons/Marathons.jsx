@@ -62,7 +62,7 @@ const Marathons = () => {
       </div>
 
       {/* Marathons Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-4 max-w-[1320px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-4 max-w-[1320px] mx-auto">
         {allMarathons.map((marathon) => (
           <div
             key={marathon._id}
