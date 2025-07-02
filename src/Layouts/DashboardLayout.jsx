@@ -37,7 +37,7 @@ const DashboardLayout = () => {
           {/* Drawer Content */}
           <div className="drawer-content flex flex-col">
             {/* Mobile Navbar */}
-            <div className="navbar bg-gradient-to-r from-purple-600 to-indigo-600 w-full lg:hidden">
+            <div className="navbar bg-gradient-to-r from-purple-600 to-indigo-600 w-full lg:hidden fixed top-0 left-0 w-full z-50">
               <div className="flex-none">
                 <label
                   htmlFor="my-drawer-2"
