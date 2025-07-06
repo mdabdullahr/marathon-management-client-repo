@@ -24,6 +24,12 @@ const Navbar = () => {
       >
         <NavLink to="/marathons">Marathons</NavLink>
       </li>
+      <li
+        className="text-lg text-gray-200 font-medium lg:text-xl
+ md:text-xl"
+      >
+        <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+      </li>
       {user && (
         <li
           className="text-lg text-gray-200 font-medium lg:text-xl
