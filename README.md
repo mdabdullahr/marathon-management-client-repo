@@ -57,7 +57,7 @@ git clone https://github.com/mdabdullahr/marathon-management-client-repo.git
 
 2. Navigate to the project directory:
 bash <br/>
-cd marathon-management-client-repo
+cd marathon-management-client
 
 3. Install dependencies:
 bash <br/>
