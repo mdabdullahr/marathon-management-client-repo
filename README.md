@@ -4,6 +4,8 @@
 
 Marathon Management System is a feature-rich event-based web application where users can create, explore, and register for marathon events. The platform offers a responsive design, user-friendly interface, and real-time interactive features to ensure a seamless user experience.
 
+<img src="https://i.ibb.co.com/RT5KVKWK/marathon.png"/>
+
 ---
 
 ## ⚡ Key Features
