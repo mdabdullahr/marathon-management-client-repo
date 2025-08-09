@@ -18,17 +18,25 @@ const Navbar = () => {
       >
         <NavLink to="/">Home</NavLink>
       </li>
-      <li
-        className="text-lg text-gray-200 font-medium lg:text-xl
+      {user && (
+        <li
+          className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
-      >
-        <NavLink to="/marathons">Marathons</NavLink>
-      </li>
+        >
+          <NavLink to="/marathons">Marathons</NavLink>
+        </li>
+      )}
       <li
         className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
         <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+      </li>
+      <li
+        className="text-lg text-gray-200 font-medium lg:text-xl
+ md:text-xl"
+      >
+        <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
       </li>
       {user && (
         <li
@@ -56,32 +64,29 @@ const Navbar = () => {
   };
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-purple-600 to-indigo-600">
-      <div className="navbar max-w-[1320px] mx-auto px-4  py-2">
+      <div className="navbar max-w-[1320px] mx-auto px-4 py-2">
         <div className="navbar-start">
           <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="lg:hidden text-black dark:text-white"
-            >
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
+                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />
+                />{" "}
               </svg>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-gray-800 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
@@ -95,10 +100,11 @@ const Navbar = () => {
             Marathon's
           </h3>
         </div>
-
-        <div className="navbar-end hidden lg:flex gap-4">
-          <ul className="flex items-center gap-6">{links}</ul>
-          <DarkMoodToggoler></DarkMoodToggoler>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{links}</ul>
+        </div>
+        <div className="navbar-end space-x-5">
+          <DarkMoodToggoler />
           {user && (
             <div className="relative group">
               <img
@@ -106,7 +112,7 @@ const Navbar = () => {
                 src={user.photoURL}
                 alt="userImg"
               />
-              <div className="absolute  left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+              <div className="absolute left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
                 {user.displayName}
               </div>
             </div>
@@ -127,50 +133,7 @@ const Navbar = () => {
                   className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
                 >
                   Login
-                </button>{" "}
-              </Link>
-              <Link to="/register">
-                <button
-                  data-aos="zoom-in"
-                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer"
-                >
-                  Register
                 </button>
-              </Link>
-            </>
-          )}
-        </div>
-        <div className="navbar-end lg:hidden">
-          <DarkMoodToggoler></DarkMoodToggoler>
-          {user && (
-            <div className="relative group mr-3 lg:mr-0">
-              <img
-                className="w-8 h-8 md:w-12 md:h-12 object-cover rounded-full border border-gray-800 dark:border-gray-300"
-                src={user.photoURL}
-                alt="userImg"
-              />
-              <div className="absolute  left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
-                {user.displayName}
-              </div>
-            </div>
-          )}
-          {user ? (
-            <button
-              onClick={handleLogOut}
-              data-aos="zoom-in"
-              className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap"
-            >
-              Logout
-            </button>
-          ) : (
-            <>
-              <Link to="/login">
-                <button
-                  data-aos="zoom-in"
-                  className="specific-text text-white border border-white font-medium text-sm md:text-lg lg:text-xl px-3 md:px-8 py-1 md:py-2 rounded transition-transform duration-500 hover:scale-105 cursor-pointer whitespace-nowrap mr-2"
-                >
-                  Login
-                </button>{" "}
               </Link>
               <Link to="/register">
                 <button
