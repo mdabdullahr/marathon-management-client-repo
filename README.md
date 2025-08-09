@@ -4,6 +4,8 @@
 
 Marathon Management System is a feature-rich event-based web application where users can create, explore, and register for marathon events. The platform offers a responsive design, user-friendly interface, and real-time interactive features to ensure a seamless user experience.
 
+<img src="https://i.ibb.co.com/RT5KVKWK/marathon.png"/>
+
 ---
 
 ## ⚡ Key Features
@@ -55,7 +57,7 @@ git clone https://github.com/mdabdullahr/marathon-management-client-repo.git
 
 2. Navigate to the project directory:
 bash <br/>
-cd marathon-management-client-repo
+cd marathon-management-client
 
 3. Install dependencies:
 bash <br/>
