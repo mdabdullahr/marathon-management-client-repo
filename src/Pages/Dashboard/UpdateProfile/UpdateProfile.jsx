@@ -33,7 +33,7 @@ const UpdateProfile = () => {
         data-aos="fade-up"
       >
         <div className="flex flex-col items-center justify-center gap-2 mb-6">
-          <FaUserEdit className="text-indigo-600 text-3xl" />
+          <FaUserEdit className="text-teal-600 text-3xl" />
           <h2 className="text-xl md:text-3xl font-bold text-purple-500 text-center">
             Update Your Profile
           </h2>
@@ -53,7 +53,7 @@ const UpdateProfile = () => {
             type="text"
             placeholder="Enter your name"
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-indigo-600 text-gray-800 dark:text-gray-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-teal-600 text-gray-800 dark:text-gray-200"
           />
         </div>
 
@@ -67,7 +67,7 @@ const UpdateProfile = () => {
             type="url"
             placeholder="Enter photo URL"
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-indigo-600 text-gray-800 dark:text-gray-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-teal-600 text-gray-800 dark:text-gray-200"
           />
         </div>
 

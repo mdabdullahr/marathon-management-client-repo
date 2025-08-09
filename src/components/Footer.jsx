@@ -31,11 +31,7 @@ const Footer = () => {
 
   return (
     <div
-      className={`bg-cover bg-center ${
-        isDark
-          ? "bg-gradient-to-r from-gray-900 to-gray-800"
-          : "bg-gradient-to-r from-white to-gray-100"
-      }`}
+      className="bg-teal-600"
     >
       <div
         data-aos="fade-up"
@@ -54,9 +50,7 @@ const Footer = () => {
             </h4>
           </div>
           <p
-            className={`text-sm md:text-lg mt-2 mb-6 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
+            className="text-gray-200"
           >
             Marathon Management System is a full-featured platform for
             organizing, managing, and registering for marathon events.
@@ -64,11 +58,9 @@ const Footer = () => {
         </div>
 
         {/* 2. Useful Links */}
-        <div className="flex flex-col space-y-2 mt-0 md:mt-5 text-gray-600 dark:text-gray-300">
+        <div className="flex flex-col space-y-2 mt-0 md:mt-5 text-gray-200">
           <h3
-            className={`text-lg md:text-xl font-semibold mb-4 ${
-              isDark ? "text-gray-300" : "text-gray-600"
-            }`}
+            className="text-lg md:text-xl font-semibold mb-4 text-white"
           >
             Useful Links
           </h3>
@@ -82,9 +74,7 @@ const Footer = () => {
         {/* 3. Contact Section */}
         <div className="mt-0 lg:mt-5">
           <h3
-            className={`text-lg md:text-xl font-semibold mb-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
+            className="text-lg md:text-xl font-semibold mb-4 text-white"
           >
             Connect With Us
           </h3>
@@ -129,9 +119,7 @@ const Footer = () => {
             </a>
           </div>
           <div
-            className={`space-y-4 ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
+            className="space-y-4 text-gray-200"
           >
             <div className="flex items-center gap-3">
               <MdPhone className="text-xl" />
@@ -196,7 +184,7 @@ const Footer = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full px-5 py-2 bg-teal-600 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
+              className="w-full px-5 py-2 bg-teal-900 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
             >
               Submit
             </button>

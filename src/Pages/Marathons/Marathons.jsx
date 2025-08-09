@@ -24,7 +24,7 @@ const Marathons = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent"></div>
+        <div className="animate-spin rounded-full h-16 w-16 border-4 border-teal-500 border-t-transparent"></div>
       </div>
     );
   }
@@ -50,8 +50,8 @@ const Marathons = () => {
       dark:text-gray-100
       focus:outline-none 
       focus:ring-2 
-      focus:ring-indigo-600 
-      dark:focus:ring-purple-600
+      focus:ring-teal-600 
+      dark:focus:ring-teal-600
       transition
       duration-200
     "
@@ -71,7 +71,7 @@ const Marathons = () => {
                 className="relative group bg-white dark:bg-gray-800 hover:shadow-2xl flex flex-col h-full overflow-hidden rounded-xl shadow"
               >
                 {/* Shadow overlay on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none z-10 bg-indigo-400"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none z-10 bg-teal-200"></div>
 
                 {/* Image */}
                 {marathon.marathonImage && (

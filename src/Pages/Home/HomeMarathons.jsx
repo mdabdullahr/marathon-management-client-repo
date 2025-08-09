@@ -23,7 +23,7 @@ const HomeMarathons = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent"></div>
+        <div className="animate-spin rounded-full h-16 w-16 border-4 border-teal-500 border-t-transparent"></div>
       </div>
     );
   }
@@ -38,7 +38,7 @@ const HomeMarathons = () => {
               className="relative group bg-white dark:bg-gray-800 hover:shadow-2xl flex flex-col h-full overflow-hidden rounded-xl shadow"
             >
               {/* Shadow overlay on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none z-10 bg-indigo-400"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none z-10 bg-teal-200"></div>
 
               {/* Image */}
               {marathon.marathonImage && (
@@ -85,7 +85,7 @@ const HomeMarathons = () => {
             Add a marathon to see marathons here.
           </p>
           <Link to="/dashboard/addMarathon">
-            <button className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+            <button className="px-4 py-2 bg-teal-600 text-white rounded cursor-pointer">
               Add Marathon
             </button>
           </Link>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router";
 
 const TermsAndCondition = () => {
@@ -10,18 +10,19 @@ const TermsAndCondition = () => {
       data-aos="fade-left"
       className="max-w-[1320px] mx-auto px-2 lg:px-6 pt-32 pb-20 text-gray-600 dark:text-gray-300 space-y-6"
     >
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-indigo-600 mb-8">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-teal-600 mb-8">
         Terms and Conditions
       </h1>
 
       <p data-aos="fade-left" className="text-lg">
-        Welcome to <strong>Marathon Management System</strong>. By accessing or using our
-        platform, you agree to comply with and be bound by the following terms
-        and conditions. Please read them carefully before using our services.
+        Welcome to <strong>Marathon Management System</strong>. By accessing or
+        using our platform, you agree to comply with and be bound by the
+        following terms and conditions. Please read them carefully before using
+        our services.
       </p>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           1. Account Responsibility
         </h2>
         <p className="text-lg">
@@ -32,7 +33,7 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium  text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium  text-gray-600 dark:text-gray-300 mt-6 mb-2">
           2. Acceptable Use
         </h2>
         <p className="text-lg">
@@ -43,7 +44,7 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           3. Content Ownership
         </h2>
         <p className="text-lg">
@@ -54,7 +55,7 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           4. Termination
         </h2>
         <p className="text-lg">
@@ -64,12 +65,12 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           5. Privacy Policy
         </h2>
         <p className="text-lg">
           We are committed to protecting your privacy. Please refer to our{" "}
-          <span className="text-purple-600 underline">
+          <span className="text-teal-600 underline">
             <Link to="/privacy-policy">Privacy Policy</Link>
           </span>{" "}
           page to learn more about how we collect, use, and protect your data.
@@ -77,7 +78,7 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl: lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl: lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           6. Changes to Terms
         </h2>
         <p className="text-lg">
@@ -88,13 +89,13 @@ const TermsAndCondition = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           7. Contact Us
         </h2>
         <p className="text-lg">
           If you have any questions or concerns about these Terms and
           Conditions, please email us at{" "}
-          <span className="text-purple-600 font-medium">
+          <span className="text-teal-600 font-medium">
             marathonmanagement@gmail.com / mdbadullah162005@gmail.com
           </span>
           .

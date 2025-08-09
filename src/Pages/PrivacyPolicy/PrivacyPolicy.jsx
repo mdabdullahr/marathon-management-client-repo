@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -10,18 +10,18 @@ const PrivacyPolicy = () => {
       data-aos="fade-left"
       className="max-w-[1320px] mx-auto px-2 lg:px-6 pt-32 pb-20 text-gray-600 dark:text-gray-300 space-y-6"
     >
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-indigo-600 mb-6">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-teal-600 mb-6">
         Privacy Policy
       </h1>
 
       <p className="text-lg">
-        At <strong>Marathon Management System</strong>, your privacy is very important to us. This
-        Privacy Policy explains how we collect, use, disclose, and safeguard
-        your information when you visit our platform.
+        At <strong>Marathon Management System</strong>, your privacy is very
+        important to us. This Privacy Policy explains how we collect, use,
+        disclose, and safeguard your information when you visit our platform.
       </p>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           1. Information We Collect
         </h2>
         <p className="text-lg">
@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           2. How We Use Your Information
         </h2>
         <p className="text-lg">
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           3. Sharing Your Information
         </h2>
         <p className="text-lg">
@@ -56,7 +56,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           4. Cookies and Tracking Technologies
         </h2>
         <p className="text-lg">
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           5. Your Data Security
         </h2>
         <p className="text-lg">
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           6. Your Rights
         </h2>
         <p className="text-lg">
@@ -89,7 +89,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           7. Changes to This Policy
         </h2>
         <p className="text-lg">
@@ -99,13 +99,13 @@ const PrivacyPolicy = () => {
       </div>
 
       <div data-aos="fade-left">
-        <h2 className="text-xl lg:text-2xl font-medium text-purple-600 mt-6 mb-2">
+        <h2 className="text-xl lg:text-2xl font-medium text-gray-600 dark:text-gray-300 mt-6 mb-2">
           8. Contact Us
         </h2>
         <p className="text-lg">
           If you have any questions or concerns regarding this Privacy Policy,
           please contact us at{" "}
-          <span className="text-purple-600 font-medium">
+          <span className="text-teal-600 font-medium">
             hobbyhub@gmail.com / mdabdullah162005@gmail.com
           </span>
           .

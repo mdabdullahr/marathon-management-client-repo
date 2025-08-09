@@ -151,8 +151,8 @@ const DashboardLayout = () => {
 
                 <button
                   onClick={handleLogOut}
-                  className="border border-purple-600 text-purple-600 
-             hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600
+                  className="border border-teal-600 text-teal-600 
+             hover:bg-gradient-to-r hover:from-teal-900 hover:to-teal-600
              hover:text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2
              transition cursor-pointer w-full"
                 >

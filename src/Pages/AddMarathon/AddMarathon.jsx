@@ -83,7 +83,7 @@ const AddMarathon = () => {
               type="text"
               required
               placeholder="Enter Marathon Title"
-              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
             />
           </div>
 
@@ -108,7 +108,7 @@ const AddMarathon = () => {
                   ref={startRegRef}
                   required
                   placeholder="Select Start Registration Date"
-                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
                 />
               }
               dateFormat="yyyy-MM-dd"
@@ -137,7 +137,7 @@ const AddMarathon = () => {
                   ref={endRegRef}
                   required
                   placeholder="Select End Registration Date"
-                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
                 />
               }
               dateFormat="yyyy-MM-dd"
@@ -166,7 +166,7 @@ const AddMarathon = () => {
                   ref={startDateRef}
                   required
                   placeholder="Select Marathon Start Date"
-                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+                  className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
                 />
               }
               dateFormat="yyyy-MM-dd"
@@ -188,7 +188,7 @@ const AddMarathon = () => {
               type="text"
               required
               placeholder="Enter Your Marathon Location"
-              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
             />
           </div>
 
@@ -203,7 +203,7 @@ const AddMarathon = () => {
             <select
               id="runningDistance"
               name="runningDistance"
-              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white transition"
+              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white transition"
             >
               {runningDistance.map((dis) => (
                 <option key={dis} value={dis}>
@@ -227,7 +227,7 @@ const AddMarathon = () => {
               type="url"
               required
               placeholder="Enter Marathon Image URL"
-              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
+              className="w-full h-12 rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition"
             />
           </div>
 
@@ -264,7 +264,7 @@ const AddMarathon = () => {
             rows={4}
             required
             placeholder="Write a brief description"
-            className="w-full rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition resize-none"
+            className="w-full rounded border border-gray-300 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 transition resize-none"
           />
         </div>
 

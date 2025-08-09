@@ -16,7 +16,7 @@ const MyMarathonList = () => {
       <Suspense
         fallback={
           <div className="my-10 flex items-center justify-center min-h-[300px]">
-            <span className="loading loading-spinner loading-xl text-primary"></span>
+            <span className="loading loading-spinner loading-xl text-teal-600"></span>
           </div>
         }
       >

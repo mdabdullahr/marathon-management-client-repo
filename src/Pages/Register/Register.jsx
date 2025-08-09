@@ -115,7 +115,7 @@ const Register = () => {
       >
         <div className="bg-white dark:bg-gray-900 max-w-md w-full rounded-3xl shadow-lg p-6 lg:p-8 m-4 lg:m-6">
           <div className="mb-6 text-center">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-indigo-600 dark:text-purple-400">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-teal-600 dark:text-teal-400">
               Create a new account
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm lg:text-xl">
@@ -128,13 +128,13 @@ const Register = () => {
             <div>
               <label className="block text-sm mb-1 font-medium">Name</label>
               <div className="relative">
-                <span className="absolute left-3 top-2.5 text-indigo-600 dark:text-purple-400">
+                <span className="absolute left-3 top-2.5 text-teal-600 dark:text-teal-400">
                   <FaUser />
                 </span>
                 <input
                   name="name"
                   type="text"
-                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-teal-500 outline-none"
                   placeholder="Enter your name"
                   required
                 />
@@ -147,13 +147,13 @@ const Register = () => {
                 Photo URL
               </label>
               <div className="relative">
-                <span className="absolute left-3 top-2.5 text-indigo-600 dark:text-purple-400">
+                <span className="absolute left-3 top-2.5 text-teal-600 dark:text-teal-400">
                   <FaPhotoVideo />
                 </span>
                 <input
                   name="photo"
                   type="text"
-                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-teal-500 outline-none"
                   placeholder="Enter your photo URL"
                   required
                 />
@@ -164,13 +164,13 @@ const Register = () => {
             <div>
               <label className="block text-sm mb-1 font-medium">Email</label>
               <div className="relative">
-                <span className="absolute left-3 top-2.5 text-indigo-600 dark:text-purple-400">
+                <span className="absolute left-3 top-2.5 text-teal-600 dark:text-teal-400">
                   <FaEnvelope />
                 </span>
                 <input
                   name="email"
                   type="email"
-                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                  className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-teal-500 outline-none"
                   placeholder="Enter your email"
                   required
                 />
@@ -181,13 +181,13 @@ const Register = () => {
             <div>
               <label className="block text-sm mb-1 font-medium">Password</label>
               <div className="relative">
-                <span className="absolute left-3 top-2.5 text-indigo-600 dark:text-purple-400">
+                <span className="absolute left-3 top-2.5 text-teal-600 dark:text-teal-400">
                   <FaLock />
                 </span>
                 <input
                   name="password"
                   type="password"
-                  className="w-full pl-10 pr-10 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                  className="w-full pl-10 pr-10 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-teal-500 outline-none"
                   placeholder="Enter your password"
                   required
                 />
@@ -197,7 +197,7 @@ const Register = () => {
             {/* Register Button */}
             <button
               type="submit"
-              className="w-full py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:shadow-xl transition cursor-pointer"
+              className="w-full py-2 rounded-lg bg-teal-600 text-white font-semibold shadow-md hover:shadow-xl transition cursor-pointer"
             >
               Register
             </button>
@@ -208,7 +208,7 @@ const Register = () => {
             Already have an account?{" "}
             <Link
               to="/login"
-              className="font-semibold text-purple-600 hover:underline"
+              className="font-semibold text-teal-600 hover:underline"
             >
               Login
             </Link>

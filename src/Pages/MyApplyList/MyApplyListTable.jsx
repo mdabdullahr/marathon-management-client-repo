@@ -106,7 +106,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
                 {registrations.map((registration, index) => (
                   <tr
                     key={registration._id}
-                    className="hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer transition"
+                    className="hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition"
                   >
                     <th>{index + 1}</th>
 
@@ -180,7 +180,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
             Join a marathon to see your applications here.
           </p>
           <Link to="/marathons">
-            <button className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+            <button className="px-4 py-2 bg-teal-600 text-white rounded cursor-pointer">
               All Marathons
             </button>
           </Link>
@@ -305,7 +305,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
+                  className="px-4 py-2 bg-teal-600 text-white rounded cursor-pointer"
                 >
                   Update
                 </button>
