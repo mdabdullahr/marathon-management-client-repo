@@ -42,8 +42,8 @@ a.active {
     width: 220%;
     height: 220%;
     background: conic-gradient(
-      rgba(99, 102, 241, 1) 0deg,    
-      rgba(168, 85, 247, 1) 60deg,   
+      rgb(0, 77, 64) 0deg,    
+      rgb(0, 137, 123) 60deg,   
       transparent 120deg
     );
     filter: blur(20px);

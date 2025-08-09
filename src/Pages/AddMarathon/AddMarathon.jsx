@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
-import useAuth from "../../Hooks/useAuth";
 import useAddMarathon from "../../Api/useAddMarathon";
+import useAuth from "../../Hooks/useAuth";
 
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
@@ -271,7 +271,7 @@ const AddMarathon = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full rounded bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 text-white text-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition"
+          className="w-full rounded bg-teal-600 px-6 py-3 text-white text-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition"
         >
           Add
         </button>

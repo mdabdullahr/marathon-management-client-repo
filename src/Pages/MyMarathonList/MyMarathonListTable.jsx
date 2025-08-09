@@ -1,13 +1,13 @@
-import React, { use, useEffect, useRef, useState } from "react";
+import Lottie from "lottie-react";
+import { use, useEffect, useRef, useState } from "react";
+import DatePicker from "react-datepicker";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
-import noData from "../../assets/Annimations/nodata.json";
-import Lottie from "lottie-react";
-import DatePicker from "react-datepicker";
 import useMyMarathon from "../../Api/useMyMarathon";
+import noData from "../../assets/Annimations/nodata.json";
 
 const runningDistance = ["25K", "20K", "15K", "10K", "5K", "3K"];
 
@@ -183,7 +183,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
             Add a marathon to see your marathons here.
           </p>
           <Link to="/dashboard/addMarathon">
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+            <button className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
               Add Marathon
             </button>
           </Link>
@@ -414,7 +414,7 @@ const MyMarathonListTable = ({ myMarathonPromise }) => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
+                  className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
                 >
                   Update
                 </button>

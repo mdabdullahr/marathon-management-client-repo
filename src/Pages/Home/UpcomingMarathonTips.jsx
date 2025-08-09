@@ -1,6 +1,3 @@
-import React from "react";
-import Lottie from "lottie-react";
-
 const UpcomingMarathonTips = () => {
   const tips = [
     "Start your training at least 8-12 weeks before the marathon.",
@@ -47,7 +44,7 @@ const UpcomingMarathonTips = () => {
               className="space-y-4 text-gray-700 dark:text-gray-300 text-sm md:text-lg list-none list-inside  "
               data-aos="fade-up"
             >
-              <h3 className="text-xl md:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-3xl font-semibold bg-teal-600 bg-clip-text text-transparent">
                 Kickstart your journey in <br /> a marathon
               </h3>
               {tips.map((tip, idx) => (

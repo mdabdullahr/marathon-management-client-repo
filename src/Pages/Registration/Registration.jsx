@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-import useAuth from "../../Hooks/useAuth.jsx";
+import Swal from "sweetalert2";
 import useRegistrations from "../../Api/useRegistrations.jsx";
+import useAuth from "../../Hooks/useAuth.jsx";
 
 const Registration = () => {
   const { user } = useAuth();
-  const {registrationsPromise} = useRegistrations();
+  const { registrationsPromise } = useRegistrations();
   const location = useLocation();
   const { title, startDate, id } = location.state || {};
   const [isRegistered, setIsRegistered] = useState(false);
@@ -16,9 +16,9 @@ const Registration = () => {
   useEffect(() => {
     if (id && user?.email) {
       registrationsPromise({
-          id,
-          email: user.email,
-          checkOnly: true,
+        id,
+        email: user.email,
+        checkOnly: true,
       })
         .then((res) => {
           setIsRegistered(res.data.alreadyRegistered);
@@ -40,7 +40,7 @@ const Registration = () => {
     const registrationObj = Object.fromEntries(formData.entries());
     const newRegistration = { id, ...registrationObj };
 
-      registrationsPromise(newRegistration)
+    registrationsPromise(newRegistration)
       .then((res) => {
         if (res.data?.insertedId) {
           Swal.fire({
@@ -58,8 +58,7 @@ const Registration = () => {
       });
   };
 
-
-   useEffect(() => {
+  useEffect(() => {
     document.title = "Marathon Management | Registration";
   }, []);
 
@@ -69,7 +68,10 @@ const Registration = () => {
 
   return (
     <div className="py-24">
-      <div data-aos="fade-up" className="max-w-4xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
+      <div
+        data-aos="fade-up"
+        className="max-w-4xl mx-auto mt-10 px-4 sm:px-6 lg:px-8"
+      >
         <div className="bg-white dark:bg-gray-900 shadow-md shadow-gray-300 dark:shadow-gray-800 rounded-lg p-6 sm:p-8">
           <h2 className=" text-lg md:text-xl lg:text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-600 dark:text-purple-200 specific-text">
             Marathon Registration
@@ -179,7 +181,7 @@ const Registration = () => {
               className={`w-full cursor-pointer px-6 py-3 rounded text-sm lg:text-lg font-normal lg:font-medium transition ${
                 isRegistered
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 font-semibold specific-text text-white"
+                  : "bg-teal-600 hover:from-purple-700 hover:to-indigo-700 font-semibold specific-text text-white"
               }`}
             >
               {isRegistered ? "Already Registered" : "Submit Registration"}{" "}

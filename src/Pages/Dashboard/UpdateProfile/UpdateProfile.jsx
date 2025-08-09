@@ -1,6 +1,5 @@
-
-import { toast } from "react-toastify";
 import { FaUserEdit } from "react-icons/fa";
+import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 
@@ -38,7 +37,11 @@ const UpdateProfile = () => {
           <h2 className="text-xl md:text-3xl font-bold text-purple-500 text-center">
             Update Your Profile
           </h2>
-          <img src={user.photoURL} className="rounded-full w-20 h-20 object-cover text-center" alt="profile image" />
+          <img
+            src={user.photoURL}
+            className="rounded-full w-20 h-20 object-cover text-center"
+            alt="profile image"
+          />
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-800 dark:text-gray-200">
@@ -71,7 +74,7 @@ const UpdateProfile = () => {
         <div className="pt-4">
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm md:text-lg font-medium py-3 rounded-xl shadow-md transition duration-300 cursor-pointer"
+            className="w-full bg-teal-600 text-white text-sm md:text-lg font-medium py-3 rounded-xl shadow-md transition duration-300 cursor-pointer"
           >
             Save Changes
           </button>

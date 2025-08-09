@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaTwitter,
 } from "react-icons/fa";
-import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
+import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import { NavLink } from "react-router";
-import footerImage from "../assets/running.png";
 import Swal from "sweetalert2";
+import footerImage from "../assets/running.png";
 
 const Footer = () => {
   const [isDark, setIsDark] = useState(false);
@@ -49,7 +49,7 @@ const Footer = () => {
               src={footerImage}
               alt="Marathon Logo"
             />
-            <h4 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent specific-text">
+            <h4 className="text-2xl font-bold bg-teal-600 bg-clip-text text-transparent specific-text">
               Marathon's Management
             </h4>
           </div>
@@ -77,8 +77,6 @@ const Footer = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/marathons">Marathons</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
-          
-          
         </div>
 
         {/* 3. Contact Section */}
@@ -90,7 +88,7 @@ const Footer = () => {
           >
             Connect With Us
           </h3>
-           <div className="flex items-center gap-4 flex-wrap mb-6">
+          <div className="flex items-center gap-4 flex-wrap mb-6">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -198,7 +196,7 @@ const Footer = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full px-5 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
+              className="w-full px-5 py-2 bg-teal-600 hover:opacity-90 text-white font-medium rounded-lg transition duration-300 text-sm cursor-pointer"
             >
               Submit
             </button>

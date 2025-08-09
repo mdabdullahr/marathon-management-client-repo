@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -39,10 +39,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section
-      aria-label="Newsletter"
-      className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 py-12 mt-20"
-    >
+    <section aria-label="Newsletter" className="w-full bg-teal-600 py-12 mt-20">
       <div className="max-w-[1320px] mx-auto px-4">
         <div className="bg-white/10 backdrop-blur rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 shadow-lg">
           {/* Left content */}
@@ -91,14 +88,14 @@ const NewsletterSection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="w-full px-4 py-3 rounded-lg focus:outline-none placeholder:text-slate-200 bg-white text-black"
+              className="w-full px-4 py-3 rounded-lg focus:outline-none placeholder:text-gray-600 bg-white text-black"
               aria-invalid={status === "error"}
               aria-describedby={status === "error" ? "email-error" : undefined}
             />
 
             <button
               type="submit"
-              className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-semibold text-indigo-700 bg-white hover:scale-[1.02] transition-transform shadow-md whitespace-nowrap"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-semibold text-teal-600 bg-white hover:scale-[1.02] transition-transform shadow-md whitespace-nowrap"
               disabled={status === "loading"}
             >
               {status === "loading" ? "Subscribing..." : "Subscribe"}
@@ -131,6 +128,6 @@ const NewsletterSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default NewsletterSection;

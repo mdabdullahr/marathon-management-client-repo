@@ -1,14 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router";
+import Lottie from "lottie-react";
+import { useEffect, useRef, useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { ImEye } from "react-icons/im";
 import { RiEyeCloseFill } from "react-icons/ri";
-import Swal from "sweetalert2";
-import { toast } from "react-toastify";
-import useAuth from "../../Hooks/useAuth";
+import { Link, useLocation, useNavigate } from "react-router";
 import { Typewriter } from "react-simple-typewriter";
-import animation from "../../assets/Annimations/Animation - 1750046473761.json"
-import Lottie from "lottie-react";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import animation from "../../assets/Annimations/Animation - 1750046473761.json";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const { loginUser, googleLogin } = useAuth();
@@ -59,27 +59,25 @@ const Login = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300 overflow-x-hidden">
       {/* Left Panel */}
-      <div data-aos="fade-right" className="md:w-1/2 bg-indigo-200 text-white flex flex-col justify-center items-center p-10 text-center relative overflow-hidden">
+      <div
+        data-aos="fade-right"
+        className="md:w-1/2 bg-indigo-200 text-white flex flex-col justify-center items-center p-10 text-center relative overflow-hidden"
+      >
         <p className="text-2xl md:text-3xl lg:text-4xl mb-5 font-semibold text-white mt-16 md:mt-0 h-[60px]">
-                  <Typewriter
-                    words={[
-                      "Welcome to your Login Page",
-                    ]}
-                    loop={false}
-                    cursor
-                    cursorStyle="_"
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1500}
-                  />
-                </p>
+          <Typewriter
+            words={["Welcome to your Login Page"]}
+            loop={false}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
+        </p>
 
-        
-         
-          <h1 className="text-4xl font-bold leading-tight mb-5 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Marathon Management System
-          </h1>
-        
+        <h1 className="text-4xl font-bold leading-tight mb-5 bg-teal-600 bg-clip-text text-transparent">
+          Marathon Management System
+        </h1>
 
         <p className="text-lg max-w-md mb-3 text-black h-[40px]">
           <Typewriter
@@ -96,13 +94,14 @@ const Login = () => {
           />
         </p>
 
-        
-
         <Lottie animationData={animation} loop={true}></Lottie>
       </div>
 
       {/* Right Panel */}
-      <div data-aos="fade-left" className="md:w-1/2 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+      <div
+        data-aos="fade-left"
+        className="md:w-1/2 flex items-center justify-center bg-gray-100 dark:bg-gray-800"
+      >
         <div className="bg-white dark:bg-gray-900 max-w-md w-full rounded-3xl shadow-lg p-6 lg:p-8 m-4 lg:m-6 transition-transform duration-300 ease-in-out hover:scale-[1.02]">
           <div className="mb-6 text-center">
             <h2 className=" text-xl md:text-2xl lg:text-3xl font-extrabold text-indigo-600 dark:text-purple-400">

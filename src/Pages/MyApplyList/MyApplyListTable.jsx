@@ -1,12 +1,12 @@
-import React, { use, useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import { use, useEffect, useState } from "react";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
-import noData from "../../assets/Annimations/nodata.json";
-import Lottie from "lottie-react";
 import useMyApply from "../../Api/useMyApply";
+import noData from "../../assets/Annimations/nodata.json";
 
 const MyApplyListRow = ({ myApplyPromise }) => {
   const data = use(myApplyPromise);
@@ -180,7 +180,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
             Join a marathon to see your applications here.
           </p>
           <Link to="/marathons">
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
+            <button className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer">
               All Marathons
             </button>
           </Link>
@@ -305,7 +305,7 @@ const MyApplyListRow = ({ myApplyPromise }) => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
+                  className="px-4 py-2 bg-teal-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded cursor-pointer"
                 >
                   Update
                 </button>

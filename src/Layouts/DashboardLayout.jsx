@@ -1,30 +1,29 @@
-import React from "react";
 import { AiOutlineHome, AiOutlinePlusCircle } from "react-icons/ai";
-import { FiList, FiClipboard, FiUser, FiLogOut } from "react-icons/fi";
+import { FiClipboard, FiList, FiLogOut, FiUser } from "react-icons/fi";
 import { GrUpdate } from "react-icons/gr";
-import logo from "../assets/running.png";
 import { Link, NavLink, Outlet } from "react-router";
-import DashboardNavbar from "../Pages/Dashboard/DashboardNavbar/DashboardNavbar";
-import useAuth from "../Hooks/useAuth";
-import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import logo from "../assets/running.png";
 import DarkMoodToggoler from "../components/DarkMoodToggoler";
+import useAuth from "../Hooks/useAuth";
+import DashboardNavbar from "../Pages/Dashboard/DashboardNavbar/DashboardNavbar";
 
 const DashboardLayout = () => {
-    const {logoutUser} = useAuth();
+  const { logoutUser } = useAuth();
   const handleLogOut = () => {
-      logoutUser()
-        .then(() => {
-          Swal.fire({
-            title: "Successfully Logged Out...!",
-            icon: "success",
-            draggable: true,
-          });
-        })
-        .catch((error) => {
-          toast.error("Logout failed...!", error.message);
+    logoutUser()
+      .then(() => {
+        Swal.fire({
+          title: "Successfully Logged Out...!",
+          icon: "success",
+          draggable: true,
         });
-    };
+      })
+      .catch((error) => {
+        toast.error("Logout failed...!", error.message);
+      });
+  };
   return (
     <div className="bg-gray-100 dark:bg-gray-900">
       <div className="hidden lg:flex sticky top-0 z-50">
@@ -37,7 +36,7 @@ const DashboardLayout = () => {
           {/* Drawer Content */}
           <div className="drawer-content flex flex-col">
             {/* Mobile Navbar */}
-            <div className="navbar bg-gradient-to-r from-purple-600 to-indigo-600 w-full lg:hidden fixed top-0 left-0 z-50">
+            <div className="navbar bg-teal-600 w-full lg:hidden fixed top-0 left-0 z-50">
               <div className="flex-none">
                 <label
                   htmlFor="my-drawer-2"
@@ -60,7 +59,7 @@ const DashboardLayout = () => {
                 </label>
               </div>
               <div className="mx-2 flex-1 px-2 text-white text-lg font-semibold">
-                Dashboard 
+                Dashboard
               </div>
               <DarkMoodToggoler></DarkMoodToggoler>
             </div>
@@ -134,7 +133,7 @@ const DashboardLayout = () => {
                 <li>
                   <NavLink
                     to="/dashboard/myProfile"
-                    className="text-white text-[15px] font-medium px-4 py-3 flex items-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600"
+                    className="text-white text-[15px] font-medium px-4 py-3 flex items-center rounded-md bg-teal-600"
                   >
                     <FiUser className="mr-2 text-lg" />
                     My Profile
@@ -143,7 +142,7 @@ const DashboardLayout = () => {
                 <li>
                   <NavLink
                     to="/dashboard/updateProfile"
-                    className="text-white text-[15px] font-medium px-4 py-3 flex items-center rounded-md mb-5 bg-gradient-to-r from-purple-600 to-indigo-600"
+                    className="text-white text-[15px] font-medium px-4 py-3 flex items-center rounded-md mb-5 bg-teal-600"
                   >
                     <GrUpdate className="mr-2 text-lg" />
                     Update Profile
@@ -151,7 +150,7 @@ const DashboardLayout = () => {
                 </li>
 
                 <button
-                onClick={handleLogOut}
+                  onClick={handleLogOut}
                   className="border border-purple-600 text-purple-600 
              hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600
              hover:text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2

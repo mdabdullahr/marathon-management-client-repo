@@ -63,7 +63,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-purple-600 to-indigo-600">
+    <div className="fixed top-0 left-0 w-full z-50 bg-teal-600">
       <div className="navbar max-w-[1320px] mx-auto px-4 py-2">
         <div className="navbar-start">
           <div className="dropdown">
