@@ -4,6 +4,7 @@ import HomeMarathons from "./HomeMarathons";
 import UpcomingMarathons from "./UpcommingMarathon";
 import UpcomingMarathonTips from "./UpcomingMarathonTips";
 import WhyJoinMarathon from "./WhyJoinMarathon";
+import NewsletterSection from "./NewstallerSection";
 
 const Home = () => {
   useEffect(() => {
@@ -30,6 +31,8 @@ const Home = () => {
       <section className="mt-20">
         <UpcomingMarathons></UpcomingMarathons>
       </section>
+
+      <NewsletterSection></NewsletterSection>
 
       {/* extra section 1 */}
       <section className="mt-20">
