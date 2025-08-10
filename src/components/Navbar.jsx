@@ -36,6 +36,12 @@ const Navbar = () => {
         className="text-lg text-gray-200 font-medium lg:text-xl
  md:text-xl"
       >
+        <NavLink to="/contact">Contact Us</NavLink>
+      </li>
+      <li
+        className="text-lg text-gray-200 font-medium lg:text-xl
+ md:text-xl"
+      >
         <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
       </li>
       {user && (
@@ -96,7 +102,7 @@ const Navbar = () => {
             src={navLogo}
             alt="Nav Logo"
           />
-          <h3 className="text-xl md:text-2xl specific-text lg:text-3xl font-bold text-white hidden md:block">
+          <h3 className="text-xl md:text-2xl specific-text lg:text-3xl font-bold text-white hidden md:block lg:hidden xl:block">
             Marathon's
           </h3>
         </div>

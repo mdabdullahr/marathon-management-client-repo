@@ -102,7 +102,7 @@ const Marathons = () => {
           </div>
 
           {/* Marathons Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-4 max-w-[1320px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 max-w-[1320px] mx-auto">
             {allMarathons.map((marathon) => (
               <div
                 key={marathon._id}
@@ -148,7 +148,7 @@ const Marathons = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-10 gap-2">
+          <div className="flex justify-center mt-20 gap-2">
             <button onClick={handlePrevPage} className="px-3 py-1 rounded border bg-gray-500 dark:bg-gray-700 cursor-pointer">Prev</button>
             {pages.map(page => <button
              key={page} 

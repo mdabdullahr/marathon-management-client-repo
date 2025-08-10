@@ -17,6 +17,7 @@ import PrivateRoutes from "../Provider/PrivateRoutes.jsx";
 import DashboardLayout from "../Layouts/DashboardLayout.jsx";
 import UpdateProfile from "../Pages/Dashboard/UpdateProfile/UpdateProfile.jsx";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile.jsx";
+import ContactUs from "../Pages/Contact/ContactUs.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "/privacy-policy",
         Component: PrivacyPolicy,
+      },
+      {
+        path: "/contact",
+        Component: ContactUs,
       },
     ],
   },

@@ -8,7 +8,7 @@ const HomeMarathons = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/limit-marathons")
+    fetch("https://marathone-management-server.vercel.app/limit-marathons")
       .then((res) => res.json())
       .then((data) => {
         setMarathons(data);
