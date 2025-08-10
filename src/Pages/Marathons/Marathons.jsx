@@ -1,21 +1,38 @@
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import {Link} from "react-router";
 import useAllMarathons from "../../Api/useAllMarathons";
 import noData from "../../assets/Annimations/nodata.json";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const Marathons = () => {
   const { allMarathonsPromise } = useAllMarathons();
   const [allMarathons, setAllMarathons] = useState([]);
   const [sortOrder, setSortOrder] = useState("desc");
   const [loading, setLoading] = useState(true);
+  const [marathonCount, setMarathonsCount] = useState();
+  const [itemsParPage, setItemsParPage] = useState(8);
+  const [currentPage, setCurrentPage] = useState(0);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    allMarathonsPromise(sortOrder).then((data) => {
+  axiosSecure.get("marathons-count")
+    .then(res => {
+      const {count} = res.data;
+      setMarathonsCount(count);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}, [axiosSecure]);
+
+  
+  useEffect(() => {
+    allMarathonsPromise(sortOrder, currentPage, itemsParPage).then((data) => {
       setAllMarathons(data);
       setLoading(false);
     });
-  }, [allMarathonsPromise, sortOrder]);
+  }, [ sortOrder, currentPage, itemsParPage]);
 
   useEffect(() => {
     document.title = "Marathon Management | Marathons";
@@ -28,6 +45,28 @@ const Marathons = () => {
       </div>
     );
   }
+
+  const handleItemsPerPage = e => {
+    const val = parseInt(e.target.value);
+    setItemsParPage(val);
+    setCurrentPage(0);
+  }
+
+  const handlePrevPage = () => {
+    if(currentPage > 0){
+      setCurrentPage(currentPage - 1);
+    }
+  }
+
+  const handleNextPage = () => {
+    if(currentPage < pages.length-1){
+      setCurrentPage(currentPage + 1);
+    }
+  }
+
+  const numberOfPages = Math.ceil(marathonCount/itemsParPage);
+  const pages = [...Array(numberOfPages).keys()]
+  
 
   return (
     <section className="min-h-screen">
@@ -108,6 +147,24 @@ const Marathons = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center mt-10 gap-2">
+            <button onClick={handlePrevPage} className="px-3 py-1 rounded border bg-gray-500 dark:bg-gray-700 cursor-pointer">Prev</button>
+            {pages.map(page => <button
+             key={page} 
+             onClick={() => setCurrentPage(page)}
+             className={`px-3 py-1 rounded ${
+                  page === currentPage
+                    ? "bg-teal-600 text-white"
+                    : "border bg-gray-500 dark:bg-gray-700 cursor-pointer"
+                }`}>{page + 1}</button>)}
+                <button onClick={handleNextPage} className="px-3 py-1 rounded border bg-gray-500 dark:bg-gray-700 cursor-pointer">Next</button>
+            <select className=" bg-gray-500 dark:bg-gray-700 rounded" value={itemsParPage} onChange={handleItemsPerPage} name="" id="">
+              <option value="4">4</option>
+              <option value="8">8</option>
+              <option value="12">12</option>
+              <option value="16">16</option>
+            </select>
           </div>
         </div>
       ) : (

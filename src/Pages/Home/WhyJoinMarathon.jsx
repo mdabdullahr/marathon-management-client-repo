@@ -26,13 +26,13 @@ const WhyJoinMarathon = () => {
             </div>
           </div>
           {/* Text Content */}
-          <div className="flex-1">
+          <div className="flex-1 text-right">
             <ul
-              className="space-y-4 text-gray-700 dark:text-gray-300 text-sm md:text-lg list-none list-inside text-ri"
+              className="space-y-4 text-gray-700 dark:text-gray-300 text-sm md:text-lg"
               data-aos="fade-up"
             >
               <h3 className="text-xl md:text-3xl font-semibold bg-teal-600 bg-clip-text text-transparent">
-                Start your marathon journey in basic Fundamental
+                Start your marathon journey in <br /> basic Fundamental
               </h3>
               <li data-aos="fade-right" data-aos-delay="100">
                 Improve your physical health and endurance.
