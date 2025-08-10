@@ -66,6 +66,7 @@ const Footer = () => {
           </h3>
           <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
           <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+          <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/marathons">Marathons</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
@@ -80,7 +81,7 @@ const Footer = () => {
           </h3>
           <div className="flex items-center gap-4 flex-wrap mb-6">
             <a
-              href="https://www.facebook.com"
+              href="https://web.facebook.com/md.abdullah.hossain.16133"
               target="_blank"
               rel="noopener noreferrer"
               className={`rounded-full p-2 ${
@@ -90,7 +91,7 @@ const Footer = () => {
               <FaFacebookF size={20} />
             </a>
             <a
-              href="https://www.twitter.com"
+              href="https://x.com/MAbdullah38476"
               target="_blank"
               rel="noopener noreferrer"
               className={`rounded-full p-2 ${
@@ -100,7 +101,7 @@ const Footer = () => {
               <FaTwitter size={20} />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/md.hossain8374"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 rounded-full p-2"
@@ -108,7 +109,7 @@ const Footer = () => {
               <FaInstagram size={20} />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/abdullah-programmer"
               target="_blank"
               rel="noopener noreferrer"
               className={`rounded-full p-2 ${
