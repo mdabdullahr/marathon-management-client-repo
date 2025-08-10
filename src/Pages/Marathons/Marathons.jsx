@@ -65,7 +65,7 @@ const Marathons = () => {
   }
 
   const numberOfPages = Math.ceil(marathonCount/itemsParPage);
-  const pages = [...Array(numberOfPages).keys()]
+  const pages = [...Array(numberOfPages).keys()];
   
 
   return (
